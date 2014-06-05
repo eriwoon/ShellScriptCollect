@@ -141,20 +141,20 @@ echo "">> $out_filename
     echo -n $tm_begin >> $out_filename
     
     #A
-    re_sql=`mdsql -c "select count(*) from A where APPLYTIME < '$tm_begin' and EXPIRETIME > '$tm_begin';" | head -3 | tail -1 | awk '{print $1}'`
+    re_sql=`mdsql -c "select count(*) from A where STARTTIME < '$tm_begin' and ENDTIME > '$tm_begin';" | head -3 | tail -1 | awk '{print $1}'`
     echo -n "${delimiter}$re_sql" >> $out_filename
     
     #B
-    re_sql=`mdsql -c "select count(*) from B where APPLYTIME < '$tm_begin' and EXPIRETIME > '$tm_begin';" | head -3 | tail -1 | awk '{print $1}'`
+    re_sql=`mdsql -c "select count(*) from B where STARTTIME < '$tm_begin' and ENDTIME > '$tm_begin';" | head -3 | tail -1 | awk '{print $1}'`
     echo -n "${delimiter}$re_sql"  >> $out_filename
 
-    re_sql=`mdsql -c "select count(*) from C where (FUPSTATUS = '24' or FUPSTATUS = '25' or FUPSTATUS = '26') and APPLYTIME < '$tm_begin' and EXPIRETIME > '$tm_begin';" | head -3 | tail -1 | awk '{print $1}'`
+    re_sql=`mdsql -c "select count(*) from C where (STATUS = '24' or STATUS = '25' or STATUS = '26') and STARTTIME < '$tm_begin' and ENDTIME > '$tm_begin';" | head -3 | tail -1 | awk '{print $1}'`
     echo -n "${delimiter}$re_sql" >> $out_filename
     
     if [ "x$lis_offerid" != "x" ]; then
         for offerid in $lis_offerid
         do 
-            re_sql=`mdsql -c "select count(*) from D where PRODUCTOFFERKEY = $offerid and APPLYTIME < '$tm_begin' and EXPIRETIME > '$tm_begin';" | head -3 | tail -1 | awk '{print $1}'`
+            re_sql=`mdsql -c "select count(*) from D where PRODUCTOFFERKEY = $offerid and STARTTIME < '$tm_begin' and ENDTIME > '$tm_begin';" | head -3 | tail -1 | awk '{print $1}'`
             echo -n "${delimiter}$re_sql" >> $out_filename
         done
     fi
