@@ -45,7 +45,7 @@ int init(vector<leaves> &h)
 {
     //open file
 	string line;
-	ifstream myfile ("/home/eric/Workspace/testCPP/src/prefixList.txt");
+	ifstream myfile ("./prefixList.txt");
 
 	leaves temp ;
 	memset(&temp,0,sizeof(temp));
@@ -130,7 +130,7 @@ int checkNumber(const vector<leaves> h, string number, int& result)
 
 int check(const vector<leaves> h)
 {
-	ifstream myfile ("/home/eric/Workspace/testCPP/src/numbers.txt2");
+	ifstream myfile ("./numbers.txt2");
 	string number;
 	int re[] = {1,1,3,3,4,4,0};
 	int result = 0;
