@@ -1,0 +1,4557 @@
+avp 1
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "User-Name";
+	AVP_DESC = "User name";
+	REPEAT_FLAG = "0";
+}
+avp 1
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 256;
+	MIN_VALUE = 0;
+	MAX_VALUE = 9999999999;
+	AVP_NAME = "3GPP-IMSI";
+	AVP_DESC = "3GPP-IMSI";
+	REPEAT_FLAG = "0";
+}
+avp 2
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "3GPP-Charging-Id";
+	REPEAT_FLAG = "0";
+}
+avp 3
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 13;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "3GPP-PDP-Type";
+	REPEAT_FLAG = "0";
+}
+avp 4
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 9;
+	AVP_NAME = "3GPP-CG-Address";
+	AVP_DESC = "3GPP-CG-Address";
+	REPEAT_FLAG = "0";
+}
+avp 5
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 99;
+	AVP_NAME = "3GPP-GPRS-Negotiated-QoS-Profile";
+	REPEAT_FLAG = "0";
+}
+avp 5
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 99;
+	AVP_NAME = "3GPP-GPRS-Negotiated-QoS-Profile";
+	REPEAT_FLAG = "0";
+}
+avp 6
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 9;
+	AVP_NAME = "3GPP-SGSN-Address";
+	AVP_DESC = "3GPP-SGSN-Address";
+	REPEAT_FLAG = "0";
+}
+avp 7
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 9;
+	AVP_NAME = "3GPP-GGSN-Address";
+	AVP_DESC = "3GPP-GGSN-Address";
+	REPEAT_FLAG = "0";
+}
+avp 8
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 40;
+	MIN_VALUE = 0;
+	MAX_VALUE = 0;
+	AVP_NAME = "Framed-IP-Address";
+	AVP_DESC = "Framed-IP-Address";
+	REPEAT_FLAG = "0";
+}
+avp 8
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "3GPP-IMSI-MCC-MNC";
+	REPEAT_FLAG = "0";
+}
+avp 9
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "3GPP-GGSN-MCC-MNC";
+	REPEAT_FLAG = "0";
+}
+avp 10
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "3GPP-NSAPI";
+	REPEAT_FLAG = "0";
+}
+avp 11
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "3GPP-Session-Stop-Indicator";
+	REPEAT_FLAG = "0";
+}
+avp 12
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "3GPP-Selection-Mode";
+	REPEAT_FLAG = "0";
+}
+avp 13
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "3GPP-Charging-Characteristics";
+	REPEAT_FLAG = "0";
+}
+avp 14
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 9;
+	AVP_NAME = "3GPP-CG-IPv6-Address";
+	AVP_DESC = "3GPP-CG-IPv6-Address";
+	REPEAT_FLAG = "0";
+}
+avp 15
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 9;
+	AVP_NAME = "3GPP-GGSN-IPv6-Address";
+	AVP_DESC = "3GPP-GGSN-IPv6-Address";
+	REPEAT_FLAG = "0";
+}
+avp 16
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 9;
+	AVP_NAME = "3GPP-SGSN-IPv6-Address";
+	AVP_DESC = "3GPP-SGSN-IPv6-Address";
+	REPEAT_FLAG = "0";
+}
+avp 18
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "3GPP-SGSN-MCC-MNC";
+	REPEAT_FLAG = "0";
+}
+avp 21
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "3GPP-RAT-Type";
+	REPEAT_FLAG = "0";
+}
+avp 22
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 1;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "3GPP-User-Location-Info";
+	REPEAT_FLAG = "0";
+}
+avp 23
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 1;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "3GPP-MS-TimeZone";
+	REPEAT_FLAG = "0";
+}
+avp 24
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "3GPP-CAMEL-Charging-Info";
+	REPEAT_FLAG = "0";
+}
+avp 30
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Called-Station-Id";
+	AVP_DESC = "APN";
+	REPEAT_FLAG = "0";
+}
+avp 33
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 256;
+	AVP_NAME = "Proxy-State";
+	AVP_DESC =
+	"It contains state local information, and MUST be treated as opaque data.";
+	REPEAT_FLAG = "0";
+}
+avp 55
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 10;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Event-Timestamp";
+	REPEAT_FLAG = "0";
+}
+avp 96
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 6;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 8;
+	MIN_VALUE = 0;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "Framed-Interface-ID";
+	AVP_DESC = "Framed-Interface-ID";
+	REPEAT_FLAG = "0";
+}
+avp 97
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 32;
+	MIN_VALUE = 0;
+	MAX_VALUE = 0;
+	AVP_NAME = "Framed-IPv6-Prefix";
+	AVP_DESC = "Framed-IPv6-Prefix";
+	REPEAT_FLAG = "0";
+}
+avp 100
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 6;
+	MAX_LENGTH = 8;
+	AVP_NAME = "UserPassWd";
+	REPEAT_FLAG = "0";
+}
+avp 256
+{
+	VENDOR_ID = 12645;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = 0;
+	MAX_VALUE = 12645;
+	AVP_NAME = "vf-Context-Type";
+	AVP_DESC = "vf-Context-Type";
+	REPEAT_FLAG = "0";
+}
+avp 257
+{
+	VENDOR_ID = 12645;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "vf-Quota-Consumption-Time";
+	AVP_DESC = "vf-Quota-Consumption-Time";
+	REPEAT_FLAG = "0";
+}
+avp 258
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Auth-Application-Id";
+	REPEAT_FLAG = "0";
+}
+avp 258
+{
+	VENDOR_ID = 12645;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "vf-Quota-Holding-Time";
+	AVP_DESC = "vf-Quota-Holding-Time";
+	REPEAT_FLAG = "0";
+}
+avp 260
+{
+	VENDOR_ID = 12645;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = 0;
+	MAX_VALUE = 99999999;
+	AVP_NAME = "vf-Radio-Access-Technology";
+	REPEAT_FLAG = "0";
+}
+avp 261
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 13;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Redirect-Host-Usage";
+	AVP_DESC =
+	"When present, this AVP dictates how the routing entry resulting from the Redirect-Host is to be used.";
+	REPEAT_FLAG = "0";
+}
+avp 261
+{
+	VENDOR_ID = 12645;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = 0;
+	MAX_VALUE = 99999999;
+	AVP_NAME = "vf-Reporting-Reason";
+	AVP_DESC = "vf-Reporting-Reason";
+	REPEAT_FLAG = "0";
+}
+avp 262
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Redirect-Max-Cache-Time";
+	AVP_DESC =
+	"This AVP MUST be present in answer messages whose 'E' bit is set, the Result-Code AVP is set to DIAMETER_REDIRECT_INDICATION and the Redirect-Host-Usage AVP set to a non-zero value.";
+	REPEAT_FLAG = "0";
+}
+avp 262
+{
+	VENDOR_ID = 12645;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 4164;
+	MIN_VALUE = 0;
+	MAX_VALUE = 9999999999;
+	AVP_NAME = "vf-Rulebase-ID";
+	AVP_DESC = "vf-Rulebase-ID";
+	REPEAT_FLAG = "0";
+}
+avp 263
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Session-Id";
+	REPEAT_FLAG = "0";
+}
+avp 263
+{
+	VENDOR_ID = 12645;
+	DATA_TYPE = 10;
+	AVP_NAME = "vf-Time-Of-First-Usage";
+	AVP_DESC = "vf-Time-Of-First-Usage";
+	REPEAT_FLAG = "0";
+}
+avp 264
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 11;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Origin-Host";
+	REPEAT_FLAG = "0";
+}
+avp 264
+{
+	VENDOR_ID = 12645;
+	DATA_TYPE = 10;
+	AVP_NAME = "vf-Time-Of-Last-Usage";
+	AVP_DESC = "vf-Time-Of-Last-Usage";
+	REPEAT_FLAG = "0";
+}
+avp 266
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Vendor-Id";
+	AVP_DESC = "Vendor-Id";
+	REPEAT_FLAG = "0";
+}
+avp 267
+{
+	VENDOR_ID = 12645;
+	DATA_TYPE = 1;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 30;
+	MIN_VALUE = 0;
+	MAX_VALUE = 0;
+	AVP_NAME = "vf-User-Location-Information";
+	AVP_DESC = "vf-User-Location-Information";
+	REPEAT_FLAG = "0";
+}
+avp 268
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Result-Code";
+	REPEAT_FLAG = "0";
+}
+avp 278
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Origin-State-Id";
+	REPEAT_FLAG = "0";
+}
+avp 279
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 0;
+	AVP_NAME = "Failed-AVP";
+	AVP_DESC =
+	"The Failed-AVP AVP (AVP Code 279) is of type Grouped and provides debugging information in cases where a request is rejected or not fully processed due to erroneous information in a specific AVP.";
+	REPEAT_FLAG = "0";
+}
+avp 280
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 11;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 256;
+	AVP_NAME = "Proxy-Host";
+	REPEAT_FLAG = "0";
+}
+avp 281
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 256;
+	AVP_NAME = "Error-Message";
+	AVP_DESC =
+	"It MAY accompany a Result-Code AVP as a human readable error message. The Error-Message AVP is not intended to be useful in real-time, and SHOULD NOT be expected to be parsed by network entities.";
+	REPEAT_FLAG = "0";
+}
+avp 282
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 11;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Route-Record";
+	REPEAT_FLAG = "0";
+}
+avp 283
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 11;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Destination-Realm";
+	REPEAT_FLAG = "0";
+}
+avp 284
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 0;
+	AVP_NAME = "Proxy-Info";
+	REPEAT_FLAG = "0";
+}
+avp 285
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Re-Auth-Request-Type";
+	AVP_DESC = "Re-Auth-Request-Type";
+	REPEAT_FLAG = "0";
+}
+avp 292
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 12;
+	AVP_NAME = "Redirect-Host";
+	AVP_DESC = "Redirect-Host";
+	REPEAT_FLAG = "0";
+}
+avp 293
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 11;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Destination-Host";
+	REPEAT_FLAG = "0";
+}
+avp 294
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 2;
+	AVP_NAME = "Error-Reporting-Host";
+	AVP_DESC = "Error-Reporting-Host";
+	REPEAT_FLAG = "0";
+}
+avp 295
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 999999999;
+	AVP_NAME = "Termination-Cause";
+	REPEAT_FLAG = "0";
+}
+avp 296
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 11;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Origin-Realm";
+	REPEAT_FLAG = "0";
+}
+avp 297
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 0;
+	AVP_NAME = "Experimental-Result";
+	AVP_DESC =
+	"It indicates whether a particular vendor-specific request was completed successfully or whether an error occurred.";
+	REPEAT_FLAG = "0";
+}
+avp 298
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Experimental-Result-Code";
+	AVP_DESC =
+	"It contains a vendor-assigned value representing the result of processing the request.";
+	REPEAT_FLAG = "0";
+}
+avp 412
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 6;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 99;
+	MIN_VALUE = 0;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "CC-Input-Octets";
+	REPEAT_FLAG = "0";
+}
+avp 413
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "CC-Money";
+	REPEAT_FLAG = "0";
+}
+avp 414
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 6;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 99;
+	MIN_VALUE = 0;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "CC-Output-Octets";
+	REPEAT_FLAG = "0";
+}
+avp 415
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "CC-Request-Number";
+	REPEAT_FLAG = "0";
+}
+avp 416
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "CC-Request-Type";
+	REPEAT_FLAG = "0";
+}
+avp 417
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 6;
+	MIN_VALUE = 0;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "CC-Service-Specific-Units";
+	REPEAT_FLAG = "0";
+}
+avp 418
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 99;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "CC-Session-Failover";
+	REPEAT_FLAG = "0";
+}
+avp 419
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 6;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "CC-Subsession-Id";
+	REPEAT_FLAG = "0";
+}
+avp 420
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "CC-Time";
+	REPEAT_FLAG = "0";
+}
+avp 421
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 6;
+	MIN_VALUE = 0;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "CC-Total-Octets";
+	REPEAT_FLAG = "0";
+}
+avp 422
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 9999;
+	AVP_NAME = "Check-Balance-Result";
+	AVP_DESC = "check balance result";
+	REPEAT_FLAG = "0";
+}
+avp 423
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Cost-Information";
+	REPEAT_FLAG = "0";
+}
+avp 424
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 9999;
+	AVP_NAME = "Cost-Unit";
+	REPEAT_FLAG = "0";
+}
+avp 425
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Currency-Code";
+	REPEAT_FLAG = "0";
+}
+avp 427
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 13;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Credit-Control-Failure-Handling";
+	AVP_DESC = "Credit-Control-Failure-Handling";
+	REPEAT_FLAG = "0";
+}
+avp 429
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Exponent";
+	REPEAT_FLAG = "0";
+}
+avp 430
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 99;
+	AVP_NAME = "Final-Unit-Indication";
+	REPEAT_FLAG = "0";
+}
+avp 431
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Granted-Service-Unit";
+	REPEAT_FLAG = "0";
+}
+avp 432
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 99;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Rating-Group";
+	REPEAT_FLAG = "0";
+}
+avp 433
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 99;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Redirect-Address-Type";
+	REPEAT_FLAG = "0";
+}
+avp 434
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 99;
+	AVP_NAME = "Redirect-Server";
+	REPEAT_FLAG = "0";
+}
+avp 435
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Redirect-Server-Address";
+	REPEAT_FLAG = "0";
+}
+avp 436
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Requested-Action";
+	REPEAT_FLAG = "0";
+}
+avp 437
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Requested-Service-Unit";
+	REPEAT_FLAG = "0";
+}
+avp 439
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Service-Identifier";
+	REPEAT_FLAG = "0";
+}
+avp 440
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 0;
+	AVP_NAME = "Service-Parameter-Info";
+	REPEAT_FLAG = "0";
+}
+avp 441
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Service-Parameter-Type";
+	REPEAT_FLAG = "0";
+}
+avp 442
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 2;
+	MAX_LENGTH = 256;
+	AVP_NAME = "Service-Parameter-Value";
+	REPEAT_FLAG = "0";
+}
+avp 443
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Subscription-Id";
+	REPEAT_FLAG = "1";
+	MAX_REPEAT_TIME = 999;
+}
+avp 444
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Subscription-Id-Data";
+	REPEAT_FLAG = "0";
+}
+avp 445
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Unit-Value";
+	REPEAT_FLAG = "0";
+}
+avp 446
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Used-Service-Unit";
+	REPEAT_FLAG = "0";
+}
+avp 447
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 4;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -9223372036854775807;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "Value-Digits";
+	REPEAT_FLAG = "0";
+}
+avp 448
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Validity-Time";
+	REPEAT_FLAG = "0";
+}
+avp 449
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Final-Unit-Action";
+	REPEAT_FLAG = "0";
+}
+avp 450
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Subscription-Id-Type";
+	REPEAT_FLAG = "0";
+}
+avp 451
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 10;
+	AVP_NAME = "Tariff-Time-Change";
+	REPEAT_FLAG = "0";
+}
+avp 452
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 99;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Tariff-Change-Usage";
+	REPEAT_FLAG = "0";
+}
+avp 453
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "G-S-U-Pool-Identifier";
+	REPEAT_FLAG = "0";
+}
+avp 454
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 13;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "CC-Unit-Type";
+	REPEAT_FLAG = "0";
+}
+avp 455
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Multiple-Services-Indicator";
+	REPEAT_FLAG = "0";
+}
+avp 456
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -999;
+	MAX_VALUE = 999;
+	AVP_NAME = "Multiple-Services-Credit-Control";
+	REPEAT_FLAG = "0";
+}
+avp 457
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 0;
+	AVP_NAME = "G-S-U-Pool-Reference";
+	REPEAT_FLAG = "0";
+}
+avp 458
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 0;
+	AVP_NAME = "User-Equipment-Info";
+	REPEAT_FLAG = "0";
+}
+avp 459
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 13;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "User-Equipment-Info-Type";
+	REPEAT_FLAG = "0";
+}
+avp 460
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "User-Equipment-Info-Value";
+	REPEAT_FLAG = "0";
+}
+avp 461
+{
+	VENDOR_ID = 0;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Service-Context-Id";
+	REPEAT_FLAG = "0";
+}
+avp 473
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "CC-Credit";
+	REPEAT_FLAG = "0";
+}
+avp 846
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 9;
+	AVP_NAME = "CG-Address";
+	REPEAT_FLAG = "0";
+}
+avp 847
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 9;
+	AVP_NAME = "GGSN-Address";
+	REPEAT_FLAG = "0";
+}
+avp 865
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 0;
+	AVP_NAME = "PS-Furnish-Charging-Information";
+	REPEAT_FLAG = "0";
+}
+avp 866
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 9999;
+	AVP_NAME = "PS-Free-Format-Data";
+	REPEAT_FLAG = "0";
+}
+avp 867
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 13;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "PS-Append-Free-Format-Data";
+	REPEAT_FLAG = "0";
+}
+avp 868
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 9999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Time-Quota-Threshold";
+	REPEAT_FLAG = "0";
+}
+avp 869
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Volume-Quota-Threshold";
+	REPEAT_FLAG = "0";
+}
+avp 870
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 99;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Trigger-Type";
+	REPEAT_FLAG = "0";
+}
+avp 871
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Quota-Holding-Time";
+	REPEAT_FLAG = "0";
+}
+avp 872
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 99;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Reporting-Reason";
+	REPEAT_FLAG = "0";
+}
+avp 873
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Service-Information";
+	REPEAT_FLAG = "0";
+}
+avp 874
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "PS-Information";
+	REPEAT_FLAG = "0";
+}
+avp 877
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "MMS-Information";
+	REPEAT_FLAG = "0";
+}
+avp 881
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Quota-Consumption-Time";
+	REPEAT_FLAG = "0";
+}
+avp 886
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Originator-Address";
+	REPEAT_FLAG = "0";
+}
+avp 897
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Address-Data";
+	REPEAT_FLAG = "0";
+}
+avp 898
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Address-Domain";
+	REPEAT_FLAG = "0";
+}
+avp 899
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 999999999;
+	AVP_NAME = "Address-Type";
+	REPEAT_FLAG = "0";
+}
+avp 1004
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Charging-Rule-Base-Name";
+	REPEAT_FLAG = "0";
+}
+avp 1101
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "VASP-Id";
+	REPEAT_FLAG = "0";
+}
+avp 1102
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "VAS-Id";
+	REPEAT_FLAG = "0";
+}
+avp 1200
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Domain-Name";
+	REPEAT_FLAG = "0";
+}
+avp 1201
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Recipient-Address";
+	REPEAT_FLAG = "0";
+}
+avp 1209
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 999;
+	AVP_NAME = "Priority";
+	REPEAT_FLAG = "0";
+}
+avp 1210
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Message-ID";
+	REPEAT_FLAG = "0";
+}
+avp 1211
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 999999999;
+	AVP_NAME = "Message-Type";
+	REPEAT_FLAG = "0";
+}
+avp 1212
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Message-Size";
+	REPEAT_FLAG = "0";
+}
+avp 1220
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 4;
+	MIN_VALUE = 0;
+	MAX_VALUE = 99999999;
+	AVP_NAME = "Content-Class";
+	REPEAT_FLAG = "0";
+}
+avp 1227
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 9;
+	AVP_NAME = "PDP-Address";
+	REPEAT_FLAG = "0";
+}
+avp 1228
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 9;
+	AVP_NAME = "SGSN-Address";
+	REPEAT_FLAG = "0";
+}
+avp 1247
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 13;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "PDP-Context-Type";
+	REPEAT_FLAG = "0";
+}
+avp 2000
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "SMS-Information";
+	REPEAT_FLAG = "0";
+}
+avp 2041
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 10;
+	AVP_NAME = "Start-Time";
+	AVP_DESC = "Start-Time";
+	REPEAT_FLAG = "0";
+}
+avp 2047
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 13;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Serving-Node-Type";
+	AVP_DESC = "Serving-Node-Type";
+	REPEAT_FLAG = "0";
+}
+avp 2050
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "PDN-Connection-Charging-ID";
+	AVP_DESC = "PDN-Connection-Charging-ID";
+	REPEAT_FLAG = "0";
+}
+avp 2901
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 32;
+	AVP_NAME = "Policy-Counter-Identifier";
+	AVP_DESC =
+	"It uniquely identifies a policy counter that is maintained per subscriber within the OCS.";
+	REPEAT_FLAG = "0";
+}
+avp 2902
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 256;
+	AVP_NAME = "Policy-Counter-Status";
+	AVP_DESC =
+	"It identifies the policy counter status applicable for a specific policy counter and subscriber. NOTE: The valid values for the Policy-Counter-Status AVP are specific for each Policy-Counter-Identifier value.";
+	REPEAT_FLAG = "0";
+}
+avp 2903
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 0;
+	AVP_NAME = "Policy-Counter-Status-Report";
+	AVP_DESC = "Policy-Counter-Status-Report";
+	REPEAT_FLAG = "0";
+}
+avp 2904
+{
+	VENDOR_ID = 10415;
+	DATA_TYPE = 13;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "SL-Request-Type";
+	AVP_DESC =
+	"对于Diameter Session中的首个请求，填写0:INITIAL_REQUEST;对于后续请求填写1:INTERMEDIATE_REQUEST.";
+	REPEAT_FLAG = "0";
+}
+avp 5105
+{
+	VENDOR_ID = 94;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 32;
+	MIN_VALUE = 0;
+	MAX_VALUE = 0;
+	AVP_NAME = "Session-Start-Indicator";
+	AVP_DESC =
+	"Always sent. But not used for charging. Just recognize the AVP but then OCS can ignore it";
+	REPEAT_FLAG = "0";
+}
+avp 20300
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "IN-Information";
+	REPEAT_FLAG = "0";
+}
+avp 20301
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Calling-Partys-Category";
+	REPEAT_FLAG = "0";
+}
+avp 20302
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Calling-Vlr-Number";
+	REPEAT_FLAG = "0";
+}
+avp 20303
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Calling-CellID-Or-SAI";
+	REPEAT_FLAG = "0";
+}
+avp 20304
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Calling-LAI";
+	REPEAT_FLAG = "0";
+}
+avp 20305
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Called-Vlr-Number";
+	REPEAT_FLAG = "0";
+}
+avp 20306
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Called-CellID-Or-SAI";
+	REPEAT_FLAG = "0";
+}
+avp 20307
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 32;
+	MIN_VALUE = 0;
+	MAX_VALUE = 999999999;
+	AVP_NAME = "Called-LAI";
+	AVP_DESC = "Called location identifier";
+	REPEAT_FLAG = "0";
+}
+avp 20308
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Called-IMEI";
+	REPEAT_FLAG = "0";
+}
+avp 20309
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Calling-IMEI";
+	REPEAT_FLAG = "0";
+}
+avp 20310
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Original-Called-Party-Id";
+	REPEAT_FLAG = "0";
+}
+avp 20312
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Additional-Calling-Party-Number";
+	REPEAT_FLAG = "0";
+}
+avp 20313
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 1;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Bearer-Capability";
+	REPEAT_FLAG = "0";
+}
+avp 20316
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Redirecting-Party-Id";
+	REPEAT_FLAG = "0";
+}
+avp 20318
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "UE-IMSI";
+	REPEAT_FLAG = "0";
+}
+avp 20321
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 1;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Call-Reference-Number";
+	REPEAT_FLAG = "0";
+}
+avp 20322
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "MSCAddress";
+	REPEAT_FLAG = "0";
+}
+avp 20324
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Time-Zone";
+	AVP_DESC = "visit time zone";
+	REPEAT_FLAG = "0";
+}
+avp 20326
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Charge-Number";
+	REPEAT_FLAG = "0";
+}
+avp 20327
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 9999;
+	AVP_NAME = "Real-Called-Number";
+	REPEAT_FLAG = "0";
+}
+avp 20328
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 4;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -9223372036854775808;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "Money-Value";
+	REPEAT_FLAG = "0";
+}
+avp 20336
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Calling-Party-Address";
+	REPEAT_FLAG = "0";
+}
+avp 20337
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Called-Party-Address";
+	REPEAT_FLAG = "0";
+}
+avp 20338
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Called-Short-Number";
+	REPEAT_FLAG = "0";
+}
+avp 20339
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Charge-Flow-Type";
+	REPEAT_FLAG = "0";
+}
+avp 20340
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Access-Method";
+	REPEAT_FLAG = "0";
+}
+avp 20341
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 0;
+	AVP_NAME = "Recharge-Information";
+	REPEAT_FLAG = "0";
+}
+avp 20342
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Card-Number";
+	REPEAT_FLAG = "0";
+}
+avp 20343
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Recharge-Method";
+	REPEAT_FLAG = "0";
+}
+avp 20344
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 0;
+	AVP_NAME = "Charge-Money";
+	REPEAT_FLAG = "0";
+}
+avp 20345
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Money-Type";
+	REPEAT_FLAG = "0";
+}
+avp 20346
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Account-Query-Method";
+	REPEAT_FLAG = "0";
+}
+avp 20347
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 13;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Charge-ConfirmFlag";
+	REPEAT_FLAG = "0";
+}
+avp 20349
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 0;
+	AVP_NAME = "Account-Change-Info";
+	REPEAT_FLAG = "0";
+}
+avp 20350
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 4;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -9223372036854775808;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "Current-Account-Balance";
+	REPEAT_FLAG = "0";
+}
+avp 20351
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 4;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -9223372036854775808;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "Account-Balance-Change";
+	REPEAT_FLAG = "0";
+}
+avp 20352
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Account-Date-Change";
+	REPEAT_FLAG = "0";
+}
+avp 20353
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Measure-Type";
+	REPEAT_FLAG = "0";
+}
+avp 20354
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Route-Prefix";
+	REPEAT_FLAG = "0";
+}
+avp 20355
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Subscriber-Pay-Type";
+	AVP_DESC = "0:prepaid;1:postpaid";
+	REPEAT_FLAG = "0";
+}
+avp 20356
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "AccountInfo";
+	REPEAT_FLAG = "0";
+}
+avp 20357
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "AccountId";
+	REPEAT_FLAG = "0";
+}
+avp 20359
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "AccountDate";
+	REPEAT_FLAG = "0";
+}
+avp 20361
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = 0;
+	MAX_VALUE = 9999999;
+	AVP_NAME = "FavCellIdFlag";
+	AVP_DESC = "favourite cellid flag";
+	REPEAT_FLAG = "0";
+}
+avp 20362
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "UserPassWd";
+	REPEAT_FLAG = "0";
+}
+avp 20363
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Redirection-Reason";
+	REPEAT_FLAG = "0";
+}
+avp 20364
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Card-Batch";
+	REPEAT_FLAG = "0";
+}
+avp 20365
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Card-Type";
+	REPEAT_FLAG = "0";
+}
+avp 20367
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Active-Day";
+	REPEAT_FLAG = "0";
+}
+avp 20371
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	AVP_NAME = "AdditionalInfo";
+	REPEAT_FLAG = "0";
+}
+avp 20372
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Account-Type";
+	REPEAT_FLAG = "0";
+}
+avp 20373
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Connect-Called-Number";
+	REPEAT_FLAG = "0";
+}
+avp 20374
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = 0;
+	MAX_VALUE = 999999999;
+	AVP_NAME = "Charge-Method";
+	AVP_DESC = "Charge method";
+	REPEAT_FLAG = "0";
+}
+avp 20375
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Total-Cost-Flag";
+	REPEAT_FLAG = "0";
+}
+avp 20378
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 4;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -9223372036854775808;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "Card-Money";
+	REPEAT_FLAG = "0";
+}
+avp 20384
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 32;
+	MIN_VALUE = 0;
+	MAX_VALUE = 9999999;
+	AVP_NAME = "Calling-Party-NP";
+	AVP_DESC = "Calling Party NP Prefix";
+	REPEAT_FLAG = "0";
+}
+avp 20385
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 32;
+	MIN_VALUE = 0;
+	MAX_VALUE = 99999999;
+	AVP_NAME = "Called-Party-NP";
+	AVP_DESC = "called party NP prefix";
+	REPEAT_FLAG = "0";
+}
+avp 20386
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 2;
+	MAX_LENGTH = 31;
+	AVP_NAME = "SSP-Time";
+	AVP_DESC = "SSP report time";
+	REPEAT_FLAG = "0";
+}
+avp 20387
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Call-Forward-Indicator";
+	REPEAT_FLAG = "0";
+}
+avp 20388
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Service-Free-Indicator";
+	REPEAT_FLAG = "0";
+}
+avp 20389
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "CardSpID";
+	REPEAT_FLAG = "0";
+}
+avp 20390
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "FraudTimes";
+	REPEAT_FLAG = "0";
+}
+avp 20391
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "SerialNo";
+	REPEAT_FLAG = "0";
+}
+avp 20392
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Cost-Type";
+	REPEAT_FLAG = "0";
+}
+avp 20394
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 0;
+	AVP_NAME = "Notice-Information";
+	REPEAT_FLAG = "0";
+}
+avp 20395
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "MessageCount";
+	REPEAT_FLAG = "0";
+}
+avp 20396
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "MessageContent1";
+	REPEAT_FLAG = "0";
+}
+avp 20397
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "MessageContent2";
+	REPEAT_FLAG = "0";
+}
+avp 20398
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "MessageContent3";
+	REPEAT_FLAG = "0";
+}
+avp 20399
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "MessageContent4";
+	REPEAT_FLAG = "0";
+}
+avp 20400
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "P2PSMS-Information";
+	REPEAT_FLAG = "0";
+}
+avp 20401
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "SMSC-Address";
+	REPEAT_FLAG = "0";
+}
+avp 20402
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "SM-Id";
+	REPEAT_FLAG = "0";
+}
+avp 20403
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "SM-Length";
+	REPEAT_FLAG = "0";
+}
+avp 20404
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "MO_msc_addr";
+	REPEAT_FLAG = "0";
+}
+avp 20405
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "MT_msc_addr";
+	REPEAT_FLAG = "0";
+}
+avp 20406
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "source_addr";
+	REPEAT_FLAG = "0";
+}
+avp 20407
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "dest_addr";
+	REPEAT_FLAG = "0";
+}
+avp 20409
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "fee_flag";
+	REPEAT_FLAG = "0";
+}
+avp 20410
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "fee_type";
+	REPEAT_FLAG = "0";
+}
+avp 20414
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 4;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "message_pid";
+	AVP_DESC = "message pid";
+	REPEAT_FLAG = "0";
+}
+avp 20415
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "status_report_request";
+	REPEAT_FLAG = "0";
+}
+avp 20418
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "send_result";
+	REPEAT_FLAG = "0";
+}
+avp 20430
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Operation_Result";
+	REPEAT_FLAG = "0";
+}
+avp 20431
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Notify_Mode";
+	REPEAT_FLAG = "0";
+}
+avp 20434
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "ORG_IMSI";
+	REPEAT_FLAG = "0";
+}
+avp 20435
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "DEST_IMSI";
+	REPEAT_FLAG = "0";
+}
+avp 20436
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "DATA_CODING_SCHEMA";
+	REPEAT_FLAG = "0";
+}
+avp 20499
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Alert-Level";
+	AVP_DESC = "voice";
+	REPEAT_FLAG = "0";
+}
+avp 20501
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 30;
+	AVP_NAME = "Message-Id";
+	AVP_DESC = "Transaction-Id";
+	REPEAT_FLAG = "0";
+}
+avp 20504
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "SP-Id";
+	REPEAT_FLAG = "0";
+}
+avp 20506
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Service-Id";
+	REPEAT_FLAG = "0";
+}
+avp 20507
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 1;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 999;
+	AVP_NAME = "Service-Type";
+	REPEAT_FLAG = "0";
+}
+avp 20508
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Content-Id";
+	REPEAT_FLAG = "0";
+}
+avp 20510
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Client-IP";
+	REPEAT_FLAG = "0";
+}
+avp 20519
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "BearerType";
+	REPEAT_FLAG = "0";
+}
+avp 20520
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "StartTime";
+	REPEAT_FLAG = "0";
+}
+avp 20521
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "StopTime";
+	REPEAT_FLAG = "0";
+}
+avp 20522
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "BearerProtocolType";
+	REPEAT_FLAG = "0";
+}
+avp 20527
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "ChargingID";
+	REPEAT_FLAG = "0";
+}
+avp 20528
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MAX_LENGTH = 31;
+	AVP_NAME = "CDRQos";
+	REPEAT_FLAG = "0";
+}
+avp 20531
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "ServiceLevel";
+	REPEAT_FLAG = "0";
+}
+avp 20538
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Recipient-Amount";
+	REPEAT_FLAG = "0";
+}
+avp 20550
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Routeing-Area-Identity";
+	REPEAT_FLAG = "0";
+}
+avp 20600
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 9999;
+	AVP_NAME = "RTBP-Information";
+	REPEAT_FLAG = "0";
+}
+avp 20601
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "sp-id";
+	REPEAT_FLAG = "0";
+}
+avp 20602
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "service-id";
+	REPEAT_FLAG = "0";
+}
+avp 20606
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "need-cnfm";
+	REPEAT_FLAG = "0";
+}
+avp 20608
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "servicetype";
+	REPEAT_FLAG = "0";
+}
+avp 20610
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "chargemode";
+	REPEAT_FLAG = "0";
+}
+avp 20617
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "src";
+	REPEAT_FLAG = "0";
+}
+avp 20618
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "dst";
+	REPEAT_FLAG = "0";
+}
+avp 20620
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "mstat";
+	REPEAT_FLAG = "0";
+}
+avp 20625
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "CDRProductID";
+	REPEAT_FLAG = "0";
+}
+avp 20626
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "CDRChargeMode";
+	REPEAT_FLAG = "0";
+}
+avp 20627
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "CDRTimes";
+	REPEAT_FLAG = "0";
+}
+avp 20628
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "CDRDuration";
+	REPEAT_FLAG = "0";
+}
+avp 20629
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "CDRVolume";
+	REPEAT_FLAG = "0";
+}
+avp 20630
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "CDRCDRType";
+	REPEAT_FLAG = "0";
+}
+avp 20631
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "CDRServiceType";
+	REPEAT_FLAG = "0";
+}
+avp 20632
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "CDRBeginTime";
+	REPEAT_FLAG = "0";
+}
+avp 20633
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "CDREndTime";
+	REPEAT_FLAG = "0";
+}
+avp 20634
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "CDRPkgSpid";
+	REPEAT_FLAG = "0";
+}
+avp 20635
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "CDRPkgServiceid";
+	REPEAT_FLAG = "0";
+}
+avp 20636
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "CDRPkgProductid";
+	REPEAT_FLAG = "0";
+}
+avp 20637
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "CDRSPName";
+	REPEAT_FLAG = "0";
+}
+avp 20638
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "CDRServiceName";
+	REPEAT_FLAG = "0";
+}
+avp 20639
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "CategoryID";
+	REPEAT_FLAG = "0";
+}
+avp 20640
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "ContentID";
+	REPEAT_FLAG = "0";
+}
+avp 20641
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "BearService";
+	REPEAT_FLAG = "0";
+}
+avp 20643
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "TransactionID";
+	REPEAT_FLAG = "0";
+}
+avp 20668
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Original-Redirecting-Party-Id";
+	REPEAT_FLAG = "0";
+}
+avp 20671
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	AVP_NAME = "SGSNIP";
+	REPEAT_FLAG = "0";
+}
+avp 20681
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 9999;
+	AVP_NAME = "ProvisitionID";
+	REPEAT_FLAG = "0";
+}
+avp 20682
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "ProvisitionType";
+	REPEAT_FLAG = "0";
+}
+avp 20683
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "ServiceMessageType";
+	REPEAT_FLAG = "0";
+}
+avp 20684
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "ServiceCapability";
+	REPEAT_FLAG = "0";
+}
+avp 20685
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MAX_VALUE = 32;
+	AVP_NAME = "AccessNo";
+	REPEAT_FLAG = "0";
+}
+avp 20686
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MAX_VALUE = 64;
+	AVP_NAME = "CommandCode";
+	REPEAT_FLAG = "0";
+}
+avp 20687
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "PayType";
+	REPEAT_FLAG = "0";
+}
+avp 20688
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "ChargeType";
+	REPEAT_FLAG = "0";
+}
+avp 20689
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MAX_LENGTH = 64;
+	AVP_NAME = "PresentId";
+	REPEAT_FLAG = "0";
+}
+avp 20690
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MAX_LENGTH = 64;
+	AVP_NAME = "VoucherID";
+	REPEAT_FLAG = "0";
+}
+avp 20691
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "CnfmInterval";
+	REPEAT_FLAG = "0";
+}
+avp 20694
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MAX_LENGTH = 64;
+	AVP_NAME = "LinkID";
+	REPEAT_FLAG = "0";
+}
+avp 20700
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "MessageContent5";
+	REPEAT_FLAG = "0";
+}
+avp 20701
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "MessageContent6";
+	REPEAT_FLAG = "0";
+}
+avp 20703
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Total-Gift-Amount";
+	REPEAT_FLAG = "0";
+}
+avp 20708
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Specific-Output";
+	REPEAT_FLAG = "0";
+}
+avp 20712
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Trade-Time";
+	REPEAT_FLAG = "0";
+}
+avp 20715
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Sms-Type";
+	REPEAT_FLAG = "0";
+}
+avp 20731
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "ChargePartyPayType";
+	AVP_DESC =
+	"The deduct information. 0-Prepaid，1-Postpaid，3-Hybird（prepaid and postpaid），4-Use free resource and promotion balance";
+	REPEAT_FLAG = "0";
+}
+avp 20732
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "RecieveMessageAddr";
+	REPEAT_FLAG = "0";
+}
+avp 20733
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "ActivePeriod";
+	REPEAT_FLAG = "0";
+}
+avp 20734
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "graceperiod";
+	REPEAT_FLAG = "0";
+}
+avp 20735
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "disableperiod";
+	REPEAT_FLAG = "0";
+}
+avp 20737
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Connect-Called-Number";
+	REPEAT_FLAG = "0";
+}
+avp 20738
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "ActiveMethod";
+	REPEAT_FLAG = "0";
+}
+avp 20739
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "OperatorID";
+	REPEAT_FLAG = "0";
+}
+avp 20740
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Etopup-SessionID";
+	REPEAT_FLAG = "0";
+}
+avp 20741
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 10;
+	AVP_NAME = "QueryStartTime";
+	REPEAT_FLAG = "0";
+}
+avp 20742
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 10;
+	AVP_NAME = "QueryEndTime";
+	REPEAT_FLAG = "0";
+}
+avp 20744
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "ErrorType";
+	REPEAT_FLAG = "0";
+}
+avp 20745
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	AVP_NAME = "NewActiveStop";
+	REPEAT_FLAG = "0";
+}
+avp 20746
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	AVP_NAME = "OldActiveStop";
+	AVP_DESC = "OldActiveStop";
+	REPEAT_FLAG = "0";
+}
+avp 20747
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	AVP_NAME = "OldUserState";
+	REPEAT_FLAG = "0";
+}
+avp 20748
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	AVP_NAME = "NewUserState";
+	REPEAT_FLAG = "0";
+}
+avp 20770
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "FunctionFlag";
+	REPEAT_FLAG = "0";
+}
+avp 20772
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "LifeCycleState";
+	REPEAT_FLAG = "0";
+}
+avp 20780
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Release-Reason";
+	REPEAT_FLAG = "0";
+}
+avp 20785
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Accumulated-Recharge-Amount";
+	REPEAT_FLAG = "0";
+}
+avp 20786
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "UniformSerialNo";
+	REPEAT_FLAG = "0";
+}
+avp 20790
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 13;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "RechargeCardType";
+	REPEAT_FLAG = "0";
+}
+avp 20791
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	AVP_NAME = "DealerCode";
+	REPEAT_FLAG = "0";
+}
+avp 20792
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	AVP_NAME = "OriginalPartyNumbe";
+	REPEAT_FLAG = "0";
+}
+avp 20793
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	AVP_NAME = "Bank-Channel-Distribution-Code";
+	REPEAT_FLAG = "0";
+}
+avp 20794
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "MainproductKey";
+	AVP_DESC = "Brand, such blue, xPay, Sukses, etc";
+	REPEAT_FLAG = "0";
+}
+avp 20795
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "SMSlanguangeType";
+	REPEAT_FLAG = "0";
+}
+avp 20796
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	AVP_NAME = "TransactioniD";
+	REPEAT_FLAG = "0";
+}
+avp 20797
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Subscriber Type";
+	REPEAT_FLAG = "0";
+}
+avp 20798
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	AVP_NAME = "Clearing-House-Id";
+	REPEAT_FLAG = "0";
+}
+avp 20799
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "ATM-Recharge-Source-Type";
+	REPEAT_FLAG = "0";
+}
+avp 20802
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "MSG-Seq";
+	REPEAT_FLAG = "0";
+}
+avp 20803
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 999;
+	AVP_NAME = "MSG-Send-Result";
+	REPEAT_FLAG = "0";
+}
+avp 20804
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Access-Network-Type";
+	REPEAT_FLAG = "0";
+}
+avp 20806
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Service-Key";
+	REPEAT_FLAG = "0";
+}
+avp 20807
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Call-Type";
+	AVP_DESC = "call type";
+	REPEAT_FLAG = "0";
+}
+avp 20812
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "RchgExtActKey";
+	REPEAT_FLAG = "0";
+}
+avp 20813
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "poolperiod";
+	REPEAT_FLAG = "0";
+}
+avp 20840
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "PriceQuery-Information";
+	REPEAT_FLAG = "0";
+}
+avp 20844
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Transfer-Amt";
+	REPEAT_FLAG = "0";
+}
+avp 20846
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Operate-Fee";
+	REPEAT_FLAG = "0";
+}
+avp 20853
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "CumInfo";
+	REPEAT_FLAG = "0";
+}
+avp 20854
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "CumId";
+	REPEAT_FLAG = "0";
+}
+avp 20855
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Cum-Money";
+	REPEAT_FLAG = "0";
+}
+avp 20856
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "CumUnit-Value";
+	REPEAT_FLAG = "0";
+}
+avp 20857
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 4;
+	MIN_VALUE = -9223372036854775808;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "CumValue-Digits";
+	REPEAT_FLAG = "0";
+}
+avp 20894
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = -2147483647;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "ActiveCurrencyCode";
+	REPEAT_FLAG = "0";
+}
+avp 20895
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = -2147483647;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "SuspendReason";
+	REPEAT_FLAG = "0";
+}
+avp 20911
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 64;
+	AVP_NAME = "LastRecTime";
+	REPEAT_FLAG = "0";
+}
+avp 20914
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 4;
+	MIN_VALUE = -9223372036854775808;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "Amount-Before-Recharge";
+	REPEAT_FLAG = "0";
+}
+avp 20917
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "FavAreaFlag";
+	REPEAT_FLAG = "0";
+}
+avp 20931
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 128;
+	MIN_VALUE = 0;
+	MAX_VALUE = 99999999;
+	AVP_NAME = "Announcement-Data";
+	REPEAT_FLAG = "0";
+}
+avp 20932
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Announcement-Order";
+	AVP_DESC =
+	"Indicate the order of the announcement to be played. Maximum 5 announcements can be played in once-time. 1: first one";
+	REPEAT_FLAG = "0";
+}
+avp 20933
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Announcement-Id";
+	REPEAT_FLAG = "0";
+}
+avp 20934
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 128;
+	MIN_VALUE = 0;
+	MAX_VALUE = 99999999;
+	AVP_NAME = "Announcement-Parameter";
+	REPEAT_FLAG = "0";
+}
+avp 20935
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = 0;
+	MAX_VALUE = 99999999;
+	AVP_NAME = "Announcement-Parameter-Type";
+	REPEAT_FLAG = "0";
+}
+avp 20936
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 256;
+	MIN_VALUE = 0;
+	MAX_VALUE = 99999999;
+	AVP_NAME = "Announcement-Parameter-Value";
+	REPEAT_FLAG = "0";
+}
+avp 20937
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	AVP_NAME = "Re-Routing-Number";
+	AVP_DESC =
+	"Rating Engine return the re-routing Number, SCP will connect to this number. The format is E.164 international format: CC+RouteNumber";
+	REPEAT_FLAG = "0";
+}
+avp 20938
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "HighLayerCharacteristics";
+	AVP_DESC =
+	"Routing map the HighLayerCharacteristics in “highLayerCompatibility” parameter from IDP to this AVP. For detailed format refer Q.931";
+	REPEAT_FLAG = "0";
+}
+avp 20939
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 13;
+	AVP_NAME = "Final-Unit-Tone-Indicator";
+	AVP_DESC =
+	"Indicates a warning Tone can be played before the call is released for the last quota. In absence of this AVP, by default, tone shall be played. 0: No Tone 1: Tone";
+	REPEAT_FLAG = "0";
+}
+avp 20940
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "VPNNotifyFlag";
+	REPEAT_FLAG = "0";
+}
+avp 20941
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 64;
+	AVP_NAME = "VPNCall-Auth-Flag";
+	REPEAT_FLAG = "0";
+}
+avp 20974
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	AVP_NAME = "Bank-Code";
+	REPEAT_FLAG = "0";
+}
+avp 20978
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Active-Flag";
+	AVP_DESC = "0:no need 1:need";
+	REPEAT_FLAG = "0";
+}
+avp 21009
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	AVP_NAME = "TenantID";
+	REPEAT_FLAG = "0";
+}
+avp 21010
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Adjust-Roaming-Type";
+	REPEAT_FLAG = "0";
+}
+avp 21011
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "HandleOver-Toolbox-Flag";
+	REPEAT_FLAG = "0";
+}
+avp 21108
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Fix-Rent-Fee";
+	REPEAT_FLAG = "0";
+}
+avp 21109
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Next-Bill-Datetime";
+	REPEAT_FLAG = "0";
+}
+avp 21119
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 64;
+	AVP_NAME = "IDD-Originate-Number";
+	REPEAT_FLAG = "0";
+}
+avp 21120
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Card-CurDistributorID";
+	REPEAT_FLAG = "0";
+}
+avp 21121
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Address-Of-Restricted-Indicator";
+	REPEAT_FLAG = "0";
+}
+avp 21123
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Message-Authenticator";
+	REPEAT_FLAG = "0";
+}
+avp 21124
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Session-Termination- Capability";
+	REPEAT_FLAG = "0";
+}
+avp 21125
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Class";
+	REPEAT_FLAG = "0";
+}
+avp 21162
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Calling-Party-Address-Nature";
+	REPEAT_FLAG = "0";
+}
+avp 21163
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Called-Party-Address-Nature";
+	REPEAT_FLAG = "0";
+}
+avp 21164
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 32;
+	MIN_VALUE = 0;
+	MAX_VALUE = 999999999;
+	AVP_NAME = "called-Party-BCDNumber";
+	AVP_DESC = "IDP.Called Party BCD Number";
+	REPEAT_FLAG = "0";
+}
+avp 21165
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "called-Party-BCDNumber-Nature";
+	AVP_DESC = "IDP.Called Party BCD Number";
+	REPEAT_FLAG = "0";
+}
+avp 21166
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Original-Called-Party-Id-Nature";
+	AVP_DESC = "IDP.Original Called Party ID";
+	REPEAT_FLAG = "0";
+}
+avp 21167
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Redirecting-Party-Id-Nature";
+	AVP_DESC = "IDP.Redirecting Party ID";
+	REPEAT_FLAG = "0";
+}
+avp 21168
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Reroute-Called-Number";
+	AVP_DESC = "reroute called number";
+	REPEAT_FLAG = "0";
+}
+avp 21169
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Calling-Msc-Address";
+	REPEAT_FLAG = "0";
+}
+avp 21170
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 32;
+	AVP_NAME = "Calling-Location-Number";
+	AVP_DESC = "IDP.Location Number";
+	REPEAT_FLAG = "0";
+}
+avp 21171
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = 0;
+	MAX_VALUE = 429497295;
+	AVP_NAME = "Calling-Location-Number-Nature";
+	AVP_DESC = "IDP.Location Number";
+	REPEAT_FLAG = "0";
+}
+avp 21172
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 32;
+	MIN_VALUE = 0;
+	MAX_VALUE = 999999999;
+	AVP_NAME = "Called-Msc-Address";
+	REPEAT_FLAG = "0";
+}
+avp 21173
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 32;
+	MIN_VALUE = 0;
+	MAX_VALUE = 999999999;
+	AVP_NAME = "Called-Location-Number";
+	REPEAT_FLAG = "0";
+}
+avp 21174
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = 0;
+	MAX_VALUE = 429497295;
+	AVP_NAME = "Called-Location-Number-Nature";
+	REPEAT_FLAG = "0";
+}
+avp 21176
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 0;
+	MIN_VALUE = 0;
+	MAX_VALUE = 999999999;
+	AVP_NAME = "Credit-Use-Notification";
+	REPEAT_FLAG = "0";
+}
+avp 21177
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 0;
+	MIN_VALUE = 0;
+	MAX_VALUE = 999999999;
+	AVP_NAME = "PPS-Account-Notify";
+	REPEAT_FLAG = "0";
+}
+avp 21178
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = -2147483648;
+	AVP_NAME = "PPS-Notify-Mode";
+	REPEAT_FLAG = "0";
+}
+avp 21179
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 4;
+	MIN_LENGTH = 8;
+	MAX_LENGTH = 8;
+	MIN_VALUE = -9223372036854775807;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "PPS-Used-Credit";
+	REPEAT_FLAG = "0";
+}
+avp 21180
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 8;
+	MAX_LENGTH = 8;
+	MIN_VALUE = -9223372036854775807;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "PPS-Max-Credit";
+	REPEAT_FLAG = "0";
+}
+avp 21181
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 20;
+	MIN_VALUE = 0;
+	MAX_VALUE = 99999999;
+	AVP_NAME = "Validity-Date";
+	REPEAT_FLAG = "0";
+}
+avp 21182
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 0;
+	MIN_VALUE = 0;
+	MAX_VALUE = 99999999;
+	AVP_NAME = "POS-Account-Notify";
+	REPEAT_FLAG = "0";
+}
+avp 21183
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "POS-Notify-Mode";
+	REPEAT_FLAG = "0";
+}
+avp 21184
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 4;
+	MIN_LENGTH = 8;
+	MAX_LENGTH = 8;
+	MIN_VALUE = -9223372036854775807;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "POS-Used-Credit";
+	REPEAT_FLAG = "0";
+}
+avp 21185
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 4;
+	MIN_LENGTH = 8;
+	MAX_LENGTH = 8;
+	MIN_VALUE = -9223372036854775807;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "POS-Max-Credit";
+	REPEAT_FLAG = "0";
+}
+avp 21186
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 20;
+	MIN_VALUE = 0;
+	MAX_VALUE = 99999999;
+	AVP_NAME = "Next-Bill-Date";
+	REPEAT_FLAG = "0";
+}
+avp 21190
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 9999;
+	AVP_NAME = "Auth-RerouteNumber";
+	REPEAT_FLAG = "0";
+}
+avp 21191
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = -2147483647;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "ISubCOSID";
+	REPEAT_FLAG = "0";
+}
+avp 21192
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = -2147483647;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "IUsertype";
+	REPEAT_FLAG = "0";
+}
+avp 21193
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = -2147483647;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "ITenantID";
+	REPEAT_FLAG = "0";
+}
+avp 21194
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = -2147483647;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "ILanguage-type";
+	REPEAT_FLAG = "0";
+}
+avp 21195
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = -2147483647;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "ISMSLanguage-type";
+	REPEAT_FLAG = "0";
+}
+avp 21196
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 0;
+	MIN_VALUE = 0;
+	MAX_VALUE = 9999999;
+	AVP_NAME = "User-Basic-info";
+	REPEAT_FLAG = "0";
+}
+avp 21198
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = -2147483647;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "IBrandID";
+	REPEAT_FLAG = "0";
+}
+avp 21204
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 0;
+	MIN_VALUE = 0;
+	MAX_VALUE = 99999;
+	AVP_NAME = "Community-information";
+	REPEAT_FLAG = "0";
+}
+avp 21205
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 32;
+	MIN_VALUE = 0;
+	MAX_VALUE = 99999999;
+	AVP_NAME = "SCallerGroupNumber";
+	REPEAT_FLAG = "0";
+}
+avp 21206
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 32;
+	MIN_VALUE = 0;
+	MAX_VALUE = 9999999;
+	AVP_NAME = "SCallerTopGroupNumber";
+	REPEAT_FLAG = "0";
+}
+avp 21207
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 32;
+	MIN_VALUE = 0;
+	MAX_VALUE = 99999;
+	AVP_NAME = "ScalledLongnumber";
+	REPEAT_FLAG = "0";
+}
+avp 21208
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 32;
+	MIN_VALUE = 0;
+	MAX_VALUE = 9999999;
+	AVP_NAME = "Scallershortnumber";
+	REPEAT_FLAG = "0";
+}
+avp 21209
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 1;
+	MIN_VALUE = 0;
+	MAX_VALUE = 999999;
+	AVP_NAME = "Scallernumbertype";
+	REPEAT_FLAG = "0";
+}
+avp 21210
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 64;
+	MIN_VALUE = 0;
+	MAX_VALUE = 9999999;
+	AVP_NAME = "ScallerVPNPhoneFlags";
+	REPEAT_FLAG = "0";
+}
+avp 21211
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 32;
+	MIN_VALUE = 0;
+	MAX_VALUE = 999999;
+	AVP_NAME = "ScallerPBXDisplayNumber";
+	REPEAT_FLAG = "0";
+}
+avp 21212
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 32;
+	MIN_VALUE = 0;
+	MAX_VALUE = 99999;
+	AVP_NAME = "ScallerHuntingMainNumber";
+	REPEAT_FLAG = "0";
+}
+avp 21213
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 32;
+	MIN_VALUE = 0;
+	MAX_VALUE = 9999999;
+	AVP_NAME = "SCalledGroupNumber";
+	REPEAT_FLAG = "0";
+}
+avp 21214
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 32;
+	MIN_VALUE = 0;
+	MAX_VALUE = 999999;
+	AVP_NAME = "SCalledTopGroupNumber";
+	REPEAT_FLAG = "0";
+}
+avp 21216
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 1;
+	MIN_VALUE = 0;
+	MAX_VALUE = 999;
+	AVP_NAME = "Scallednumbertype";
+	REPEAT_FLAG = "0";
+}
+avp 21217
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 64;
+	MIN_VALUE = 0;
+	MAX_VALUE = 999999;
+	AVP_NAME = "ScalledVPNPhoneFlags";
+	REPEAT_FLAG = "0";
+}
+avp 21218
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 64;
+	MIN_VALUE = 0;
+	MAX_VALUE = 999999;
+	AVP_NAME = "ScalledPBXDisplayNumber";
+	REPEAT_FLAG = "0";
+}
+avp 21219
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 32;
+	MIN_VALUE = 0;
+	MAX_VALUE = 99999;
+	AVP_NAME = "ScalledHuntingMainNumber";
+	REPEAT_FLAG = "0";
+}
+avp 21220
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 6;
+	MIN_VALUE = 0;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "Parentlimitvalue";
+	AVP_DESC =
+	"查询余额流程中使用，当主叫用户为特殊子卡时，母卡给特殊子卡的当前可用限额会返回。如果存在多个限额记录，仅返回一条。如果不存在支付限额记录，则返回0.";
+	REPEAT_FLAG = "0";
+}
+avp 21300
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 1;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "activestep";
+	AVP_DESC = "active step";
+	REPEAT_FLAG = "0";
+}
+avp 21410
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 100;
+	MIN_VALUE = -999;
+	MAX_VALUE = 999;
+	AVP_NAME = "Announcement-Parameter-Type1";
+	AVP_DESC = "param type1";
+	REPEAT_FLAG = "0";
+}
+avp 21411
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Announcement-Parameter-Value1";
+	AVP_DESC = "param value1";
+	REPEAT_FLAG = "0";
+}
+avp 21412
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 100;
+	MIN_VALUE = -999;
+	MAX_VALUE = 999;
+	AVP_NAME = "Announcement-Parameter-Type2";
+	AVP_DESC = "param type2";
+	REPEAT_FLAG = "0";
+}
+avp 21413
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Announcement-Parameter-Value2";
+	REPEAT_FLAG = "0";
+}
+avp 21414
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -999;
+	MAX_VALUE = 999;
+	AVP_NAME = "Announcement-Parameter-Type3";
+	AVP_DESC = "param type3";
+	REPEAT_FLAG = "0";
+}
+avp 21415
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Announcement-Parameter-Value3";
+	REPEAT_FLAG = "0";
+}
+avp 21416
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -999;
+	MAX_VALUE = 999;
+	AVP_NAME = "Announcement-Parameter-Type4";
+	AVP_DESC = "param type4";
+	REPEAT_FLAG = "0";
+}
+avp 21417
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Announcement-Parameter-Value4";
+	REPEAT_FLAG = "0";
+}
+avp 21418
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -999;
+	MAX_VALUE = 999;
+	AVP_NAME = "Announcement-Parameter-Type5";
+	AVP_DESC = "param type5";
+	REPEAT_FLAG = "0";
+}
+avp 21419
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Announcement-Parameter-Value5";
+	REPEAT_FLAG = "0";
+}
+avp 22121
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "CardBrandID";
+	REPEAT_FLAG = "0";
+}
+avp 22992
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 10;
+	AVP_NAME = "New-SSP-Time";
+	AVP_DESC = "For OM";
+	REPEAT_FLAG = "0";
+}
+avp 22994
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 4;
+	MIN_VALUE = -9223372036854775808;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "New-Card-Money";
+	REPEAT_FLAG = "0";
+}
+avp 22995
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 4;
+	MIN_VALUE = -9223372036854775808;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "New-Money-Value";
+	REPEAT_FLAG = "0";
+}
+avp 29000
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 0;
+	MIN_VALUE = 0;
+	MAX_VALUE = 0;
+	AVP_NAME = "MC-Information";
+	AVP_DESC = "MC-Information";
+	REPEAT_FLAG = "1";
+	MAX_REPEAT_TIME = 10;
+}
+avp 29001
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 20;
+	MIN_VALUE = 0;
+	MAX_VALUE = 9999999999;
+	AVP_NAME = "TransactionId";
+	AVP_DESC = "TransactionId";
+	REPEAT_FLAG = "1";
+	MAX_REPEAT_TIME = 10;
+}
+avp 29002
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 20;
+	MIN_VALUE = 0;
+	MAX_VALUE = 9999999999;
+	AVP_NAME = "MC-Service-Id";
+	REPEAT_FLAG = "1";
+	MAX_REPEAT_TIME = 10;
+}
+avp 29003
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 20;
+	MIN_VALUE = 0;
+	MAX_VALUE = 9999999999;
+	AVP_NAME = "TransparentData";
+	AVP_DESC = "TransparentData";
+	REPEAT_FLAG = "1";
+	MAX_REPEAT_TIME = 10;
+}
+avp 30015
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "PersonalPayNotifyMode";
+	REPEAT_FLAG = "0";
+}
+avp 30016
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 4;
+	MIN_VALUE = -9223372036854775807;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "PersonalPayCostValue";
+	REPEAT_FLAG = "0";
+}
+avp 30017
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Keepvoiceflag";
+	REPEAT_FLAG = "0";
+}
+avp 30020
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 32;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = -2147483648;
+	AVP_NAME = "SameCUGNotFreeNotifyflag";
+	REPEAT_FLAG = "0";
+}
+avp 30022
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 4;
+	MIN_VALUE = -9223372036854775808;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "UbilledFee";
+	REPEAT_FLAG = "0";
+}
+avp 30023
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 4;
+	MAX_LENGTH = 4;
+	MIN_VALUE = 0;
+	MAX_VALUE = 100;
+	AVP_NAME = "ShareCallPercent";
+	REPEAT_FLAG = "0";
+}
+avp 30800
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 0;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 9999;
+	AVP_NAME = "Auth-Information";
+	REPEAT_FLAG = "0";
+}
+avp 30801
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Auth-ResultCode";
+	REPEAT_FLAG = "0";
+}
+avp 30802
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 9999;
+	AVP_NAME = "Auth-userstate";
+	REPEAT_FLAG = "0";
+}
+avp 30803
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Auth-action";
+	REPEAT_FLAG = "0";
+}
+avp 30804
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Auth-VoiceID";
+	REPEAT_FLAG = "0";
+}
+avp 30805
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Auth-MessageID";
+	REPEAT_FLAG = "0";
+}
+avp 30806
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Auth-subservicekey";
+	REPEAT_FLAG = "0";
+}
+avp 30808
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "RN-Prefix";
+	REPEAT_FLAG = "0";
+}
+avp 30809
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 13;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Recipient_Type";
+	REPEAT_FLAG = "0";
+}
+avp 30816
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "MainProductID";
+	REPEAT_FLAG = "0";
+}
+avp 30889
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	AVP_NAME = "Linking-Event-ID";
+	REPEAT_FLAG = "0";
+}
+avp 31000
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 2;
+	AVP_NAME = "3GPP-Example";
+	REPEAT_FLAG = "0";
+}
+avp 60001
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 0;
+	AVP_NAME = "BalanceInfo";
+	REPEAT_FLAG = "0";
+}
+avp 60002
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Payment-Type";
+	REPEAT_FLAG = "0";
+}
+avp 60003
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 5;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = 0;
+	MAX_VALUE = 4294967295;
+	AVP_NAME = "Balance-Category";
+	REPEAT_FLAG = "0";
+}
+avp 60004
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 4;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -9223372036854775808;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "Balance-Id";
+	REPEAT_FLAG = "0";
+}
+avp 60005
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Balance-Type";
+	REPEAT_FLAG = "0";
+}
+avp 60006
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 4;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -9223372036854775808;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "Current-Balance";
+	REPEAT_FLAG = "0";
+}
+avp 60007
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 10;
+	AVP_NAME = "BalanceDate";
+	REPEAT_FLAG = "0";
+}
+avp 60008
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 3;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -2147483648;
+	MAX_VALUE = 2147483647;
+	AVP_NAME = "Related-Object-Type";
+	REPEAT_FLAG = "0";
+}
+avp 60009
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 4;
+	MIN_LENGTH = 0;
+	MAX_LENGTH = 999;
+	MIN_VALUE = -9223372036854775808;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "Related-Object-ID";
+	REPEAT_FLAG = "0";
+}
+avp 60010
+{
+	VENDOR_ID = 2011;
+	DATA_TYPE = 4;
+	MIN_VALUE = -9223372036854775808;
+	MAX_VALUE = 9223372036854775807;
+	AVP_NAME = "Unpaid-Fee";
+	REPEAT_FLAG = "0";
+}
