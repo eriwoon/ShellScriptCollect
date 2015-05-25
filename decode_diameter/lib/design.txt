@@ -1,0 +1,23 @@
+root
+
+framework.py TODO:修改显示的线条的样式
+ - tkframework/MyCanvasList.py TODO:这里需要修改获取线条的方式
+    - tkframework/PcapProcess.py 这个文件已经实现了输出细节的能力 
+      TODO: Didn't have the ability to export the source and dest IP for DCC
+       - 
+这里需要一个能够从Pcap返回给CanvasList的一个数据结构
+Message Type
+	Type HTTP/Diameter
+HTTP消息:
+	sourceIP
+	sourcePort
+	destIP
+	destPort
+	Timestamp
+	HTTPSerialNo
+Diameter Message:
+	SourceIP
+	sourcePort
+	destIP
+	destPort
+	Timestamp

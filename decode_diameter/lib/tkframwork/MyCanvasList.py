@@ -29,11 +29,15 @@ class MyCanvasList():
                 {START: 2, END: 1, TEXT:  '654'},
                 {START: 1, END: 0, TEXT:  '432'}]
         else:
-            PcapProcess.main(filename)
-
+            ret = PcapProcess.main(filename)
+            self.nodes = ret.nodes
+            self.lines = ret.lines
+            
 def main():
-    myCanvasList = MyCanvasList('C:/Users/x00194181/Documents/GitHub/ShellScriptCollect/decode_diameter/lib/1.pcap')
+    myCanvasList = MyCanvasList('1.pcap')
+    
 
 if __name__ == "__main__":
     os.chdir(os.path.dirname(sys.argv[0]))
     main()
+    

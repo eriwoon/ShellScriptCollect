@@ -297,7 +297,10 @@ def decode(avps,hex):
 
 def prepare():
     #use the the directory where the script located as current work dir
-    os.chdir(os.path.dirname(sys.argv[0]))
+    try:
+    	os.chdir(os.path.dirname(sys.argv[0]))
+    except:
+        pass
 
     #load the avp define file
     file_name_avp_define = "Avpdefine.avp"

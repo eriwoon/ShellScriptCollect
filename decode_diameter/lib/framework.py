@@ -9,10 +9,10 @@ from tkframwork.MyCanvasList import MyCanvasList
 class myWindow(Frame):
     def __init__(self, master=None,width=100, height=100):
         Frame.__init__(self, width = width, height = height)
-        
+
         self.createWidgets()
         self.bind_all("<Escape>", self.onClickEscape)
-        
+
     def createWidgets(self):
         '''Command items in the left'''
         self.leftFrame = Frame(self)
@@ -21,15 +21,15 @@ class myWindow(Frame):
         #self.fileSelectBox = ExFileSelectBox(self.leftFrame, directory = 'c:\\')
         #self.fileSelectBox.pack(side = 'top')
         self.leftFrame.pack(side = 'left', ipadx = 1)
-        
+
         '''Flow in the middle'''
-        self.flow = Canvas(self, bg='white', width = 300)        
+        self.flow = Canvas(self, bg='white', width = 300)
         self.leftLine = None
         self.canvasLines = []
 
         Widget.bind(self.flow, "<Configure>", self.drawCanvas)
         self.flow.pack(side = 'left', fill='y', ipadx = 1)
-        
+
         '''Text in the right'''
         self.text_out = Text(self, wrap=NONE)
         self.text_out.insert('1.0','AVP tree will show here')
@@ -39,9 +39,9 @@ class myWindow(Frame):
         self.scry.config(command=self.text_out.yview)
         self.scrx.config(command=self.text_out.xview)
         self.text_out.pack(side = 'left', fill = 'y')
-        
-        
-    def drawCanvas(self, event = 0):        
+
+
+    def drawCanvas(self, event = 0):
         #create resize line
         if self.leftLine == None:
             self.leftLine = self.flow.create_line(self.flow.winfo_width() - 5, 0, self.flow.winfo_width() - 5, self.flow.winfo_height(), width = 2, fill="grey")
@@ -49,10 +49,10 @@ class myWindow(Frame):
             self.flow.tag_bind(self.leftLine, "<Any-Leave>", self.leftLineMouseLeave)
             self.flow.tag_bind(self.leftLine, "<Button-1>", self.leftLineMouseDown)
             self.flow.tag_bind(self.leftLine, "<B1-Motion>", self.leftLineMouseMove)
-            
+
             self.text_out.config(width = self.winfo_width() - self.leftFrame.winfo_width() - self.flow.winfo_width())
-            
-        myCanvasList = MyCanvasList()
+
+        myCanvasList = MyCanvasList('1.pcap')
 
         #clear existing items
         for i in self.canvasLines:
@@ -61,7 +61,7 @@ class myWindow(Frame):
         self.canvasLines = []
         #store the pos of the lines, used for draw horizontal lines
         self.nodePos = []
-        
+
         #create host name and vertical lines
         for i in range(len(myCanvasList.nodes)):
             pos = 50 + (self.flow.winfo_width() - 100) // (len(myCanvasList.nodes)-1) * i
@@ -85,8 +85,8 @@ class myWindow(Frame):
             self.flow.tag_bind(self.canvasLines[-1], "<Any-Enter>", self.canvasMouseEnter)
             self.flow.tag_bind(self.canvasLines[-1], "<Any-Leave>", self.canvasMouseLeave)
             self.flow.tag_bind(self.canvasLines[-1], "<Button-1>", lambda event,text = myCanvasList.lines[i][TEXT]: self.setText(text))
-   
-            
+
+
     #event handling
     def leftLineMouseEnter(self, event):
         self.config(cursor="sb_h_double_arrow")
@@ -102,7 +102,7 @@ class myWindow(Frame):
         self.flow.config(width = event.x )
         self.lastx = event.x
         self.lasty = event.y
-        
+
     def canvasMouseEnter(self, event):
         self.config(cursor="hand2")
     def canvasMouseLeave(self, event):
@@ -110,20 +110,20 @@ class myWindow(Frame):
     def canvasMouseDown(self, event):
         # remember where the mouse went down
         pass
-    
+
     def onClickEscape(self, key):
         self.master.quit()
     def onClickResize(self):
         filename = tkFileDialog.askopenfilename(filetypes = (("Template files", "*.tplate")
                                                          ,("HTML files", "*.html;*.htm")
                                                          ,("All files", "*.*") ))
-        if filename: 
-            try: 
+        if filename:
+            try:
                 self.settings["template"].set(filename)
-            except: 
+            except:
                 tkMessageBox.showerror("Open Source File", "Failed to read file \n'%s'"%filename)
                 return
-        
+
     def setText(self, text):
         self.text_out.delete('1.0','end')
         self.text_out.insert('1.0', text)

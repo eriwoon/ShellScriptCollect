@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # coding=utf-8
-from __future__ import unicode_literals, print_function, division
+#from __future__ import unicode_literals, print_function, division
 import os
 import sys
 import struct
@@ -13,11 +13,17 @@ from protocolprocess.DiameterProcess import DiameterConn
 from collections import OrderedDict
 
 
+class Message:
+    def __init__(self):
+        self.type = None
+
+
 # check python version
-major, minor, = sys.version_info[:2]
+major, minor = sys.version_info[:2]
 if major != 2 or minor < 7:
     print("Python version 2.7.* needed.")
     sys.exit(1)
+
 
 def get_file_format(infile):
     """
@@ -32,7 +38,8 @@ def get_file_format(infile):
         return FileFormat.PCAP_NG, buf
     else:
         return FileFormat.UNKNOWN, buf
-        
+
+
 def process_pcap_file(conn_dict, infile):
     file_format, head = get_file_format(infile)
     if file_format == FileFormat.PCAP:
@@ -42,9 +49,10 @@ def process_pcap_file(conn_dict, infile):
     else:
         print("unknown file format.")
         sys.exit(1)
-    #used for diameter decode    
+
+    #used for diameter decode
     diameterConn = DiameterConn()
-    
+
     _filter = config.get_filter()
     for tcp_pac in packet_parser.read_package_r(pcap_file):
         # filter
@@ -52,7 +60,7 @@ def process_pcap_file(conn_dict, infile):
             continue
         if not (_filter.by_port(tcp_pac.source_port) or _filter.by_port(tcp_pac.dest_port)):
             continue
-            
+
         #IP Protocol
         if(tcp_pac.source_port == 8083 or tcp_pac.dest_port == 8083):
             key = tcp_pac.gen_key()
@@ -61,7 +69,8 @@ def process_pcap_file(conn_dict, infile):
                 conn_dict[key].append(tcp_pac)
                 # conn closed.
                 if tcp_pac.pac_type == packet_parser.TcpPack.TYPE_CLOSE:
-                    conn_dict[key].finish()
+                    for pac in conn_dict[key]:
+                        print(pac.__dict__)
                     del conn_dict[key]
 
             # begin tcp connection.
@@ -72,7 +81,7 @@ def process_pcap_file(conn_dict, infile):
                 # if is a http request?
                 if utils.is_request(tcp_pac.body):
                     conn_dict[key] = HttpConn(tcp_pac)
-                    
+
         elif(tcp_pac.source_port in (6553,16553) or tcp_pac.dest_port in (6553,16553)):
             if len(tcp_pac.body) > 20:
                 version = struct.unpack('!b',tcp_pac.body[0:1])[0]
@@ -86,25 +95,27 @@ def process_pcap_file(conn_dict, infile):
                     headerinfo, tree = diameterConn.decode(tcp_pac.body)
                     for avp in tree:
                         avp.output()
-   
+
 def main(filename = None):
-    
+
     if(filename == None):
         filename = '1.pcap'
-    
-    _filter = config.get_filter()    
+
+    _filter = config.get_filter()
     conn_dict = OrderedDict()
     config.out = sys.stdout
     try:
         infile = open(filename, "rb")
         try:
-            process_pcap_file(conn_dict, infile)
+            ret = process_pcap_file(conn_dict, infile)
         finally:
             infile.close()
     finally:
         for conn in conn_dict.values():
             conn.finish()
-        
+
+    return ret
+
 if __name__ == "__main__":
     os.chdir(os.path.dirname(sys.argv[0]))
     try:
