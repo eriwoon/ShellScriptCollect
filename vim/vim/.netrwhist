@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/eric/Github/ShellScriptCollect/decode_diameter'
-let g:netrw_dirhist_2='/Users/eric/.vim'
-let g:netrw_dirhist_3='/Applications/World of Warcraft/World of Warcraft.app/Contents/Resources/zh_Hans.lproj'
-let g:netrw_dirhist_4='/Users/eric/Github/ShellScriptCollect/vim/vim'
