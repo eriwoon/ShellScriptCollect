@@ -16,6 +16,12 @@ from collections import OrderedDict
 class Message:
     def __init__(self):
         self.type = None
+        self.sourceIP = None
+        self.destIP = None
+        self.sourcePort = None
+        self.destPort = None
+        self.Timestamp = None #UTC
+        self.HTTSerialNo = None
 
 
 # check python version
@@ -69,8 +75,19 @@ def process_pcap_file(conn_dict, infile):
                 conn_dict[key].append(tcp_pac)
                 # conn closed.
                 if tcp_pac.pac_type == packet_parser.TcpPack.TYPE_CLOSE:
-                    for pac in conn_dict[key]:
-                        print(pac.__dict__)
+                    print("xiaozhen: conn_dict[key]")
+                    print(conn_dict[key])
+                    print("xiaozhen: conn_dict[key].__dict__")
+                    print(conn_dict[key].__dict__)
+                    print("xiaozhen: http_parser")
+                    print(conn_dict[key].http_parser.uri)
+
+                    msg = Message()
+                    msg.sourceIP = conn_dict[key].source_ip
+                    msg.sourcePort = conn_dict[key].source_port
+                    msg.destIP = conn_dict[key].dest_ip
+                    msg.destPort = conn_dict[key].dest_port
+
                     del conn_dict[key]
 
             # begin tcp connection.
