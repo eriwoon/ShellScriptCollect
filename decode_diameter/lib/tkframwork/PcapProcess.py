@@ -22,6 +22,7 @@ class Message:
         self.destPort = None
         self.Timestamp = None #UTC
         self.HTTSerialNo = None
+        self.body = None
 
 
 # check python version
@@ -75,18 +76,19 @@ def process_pcap_file(conn_dict, infile):
                 conn_dict[key].append(tcp_pac)
                 # conn closed.
                 if tcp_pac.pac_type == packet_parser.TcpPack.TYPE_CLOSE:
-                    print("xiaozhen: conn_dict[key]")
-                    print(conn_dict[key])
-                    print("xiaozhen: conn_dict[key].__dict__")
-                    print(conn_dict[key].__dict__)
                     print("xiaozhen: http_parser")
-                    print(conn_dict[key].http_parser.uri)
 
-                    msg = Message()
-                    msg.sourceIP = conn_dict[key].source_ip
-                    msg.sourcePort = conn_dict[key].source_port
-                    msg.destIP = conn_dict[key].dest_ip
-                    msg.destPort = conn_dict[key].dest_port
+                    for package in conn_dict[key].http_parser.tcp_pac_list:
+                        print("xiaozhen: package")
+                        msg = Message()
+                        print(package)
+                        print("xiaozhen: package finishe")
+                        msg.type = 'HTTP'
+                        msg.sourceIP = package[1]
+                        msg.sourcePort = package[2]
+                        msg.destIP = package[3]
+                        msg.destPort = package[4]
+                        msg.body = package[0].body
 
                     del conn_dict[key]
 

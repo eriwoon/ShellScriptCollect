@@ -26,11 +26,18 @@ class HttpConn:
         self.processor = HttpPrinter((self.source_ip, self.source_port),
                                      (self.dest_ip, self.dest_port))
         self.http_parser = HttpParser(self.processor)
+        self.tcp_pac_list = []
         self.append(tcp_pac)
 
     def append(self, tcp_pac):
+        print("xiaozhen, HttpConn")
+        print([tcp_pac,self.source_ip, self.source_port, self.dest_ip, self.dest_port])
+        `print("xiaozhen, HttpConn end ")
         if len(tcp_pac.body) == 0:
             return
+        #Store the tcp infos, will be used to display
+        self.tcp_pac_list.append([tcp_pac,self.source_ip, self.source_port, self.dest_ip, self.dest_port])
+
         if self.status == HttpConn.STATUS_ERROR or self.status == HttpConn.STATUS_CLOSED:
             # not http conn or conn already closed.
             return
