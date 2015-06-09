@@ -53,15 +53,15 @@ class PcapFile(object):
 
         # end of file.
         if not package_header:
-            return None, None
+            return None, None, None, None
 
         seconds, suseconds, packet_len, raw_len = struct.unpack(self.byteorder + b'IIII',
                                                                 package_header)
         # note: packet_len contains padding.
         link_packet = self.infile.read(packet_len)
         if len(link_packet) < packet_len:
-            return None, None
-        return packet_len, link_packet
+            return None, None, None, None
+        return packet_len, link_packet, seconds, suseconds
 
     def read_packet(self):
         flag = self.pcap_check()
@@ -70,8 +70,8 @@ class PcapFile(object):
             print("Can't recognize this PCAP file format.", file=sys.stderr)
             return
         while True:
-            packet_len, link_packet = self.read_pcap_pac()
+            packet_len, link_packet, seconds, suseconds = self.read_pcap_pac()
             if link_packet:
-                yield self.byteorder, self.link_type, link_packet
+                yield self.byteorder, self.link_type, link_packet, seconds, suseconds
             else:
                 return

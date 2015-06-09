@@ -76,19 +76,18 @@ def process_pcap_file(conn_dict, infile):
                 conn_dict[key].append(tcp_pac)
                 # conn closed.
                 if tcp_pac.pac_type == packet_parser.TcpPack.TYPE_CLOSE:
-                    print("xiaozhen: http_parser")
-
-                    for package in conn_dict[key].http_parser.tcp_pac_list:
-                        print("xiaozhen: package")
+                    for package in conn_dict[key].tcp_pac_list:
                         msg = Message()
-                        print(package)
-                        print("xiaozhen: package finishe")
                         msg.type = 'HTTP'
                         msg.sourceIP = package[1]
                         msg.sourcePort = package[2]
                         msg.destIP = package[3]
                         msg.destPort = package[4]
                         msg.body = package[0].body
+                        msg.seconds = package[0].seconds
+                        msg.suseconds = package[0].suseconds
+
+                        yield msg
 
                     del conn_dict[key]
 
@@ -109,11 +108,24 @@ def process_pcap_file(conn_dict, infile):
                 command_code = struct.unpack('!I',b'\x00' + tcp_pac.body[5:8])[0]
                 application_ID, hop_by_hop_ID, end_to_end_ID = struct.unpack('!III', tcp_pac.body[8:20])
 
-                if(version == 1 and command_code == 272):
+                if(version == 1):
                     #print(version, message_length, command_code)
                     headerinfo, tree = diameterConn.decode(tcp_pac.body)
+                    body = ''
                     for avp in tree:
-                        avp.output()
+                        body += avp.AVPoutput()
+
+                    msg = Message()
+                    msg.type = 'Diameter'
+                    msg.sourceIP = tcp_pac.source
+                    msg.sourcePort = tcp_pac.source_port
+                    msg.destIP = tcp_pac.dest
+                    msg.destPort = tcp_pac.dest_port
+                    msg.body = body
+                    msg.seconds = tcp_pac.seconds
+                    msg.suseconds = tcp_pac.suseconds
+
+                    yield msg
 
 def main(filename = None):
 
@@ -126,14 +138,13 @@ def main(filename = None):
     try:
         infile = open(filename, "rb")
         try:
-            ret = process_pcap_file(conn_dict, infile)
+            yield process_pcap_file(conn_dict, infile)
         finally:
             infile.close()
     finally:
         for conn in conn_dict.values():
             conn.finish()
 
-    return ret
 
 if __name__ == "__main__":
     os.chdir(os.path.dirname(sys.argv[0]))

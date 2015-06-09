@@ -15,7 +15,7 @@ class TcpPack:
     TYPE_ESTABLISH = 0  # establish conn
     TYPE_CLOSE = -1  # close tcp connection
 
-    def __init__(self, source, source_port, dest, dest_port, pac_type, seq, ack, body):
+    def __init__(self, source, source_port, dest, dest_port, pac_type, seq, ack, body,seconds, suseconds):
         self.source = source
         self.source_port = source_port
         self.dest = dest
@@ -26,6 +26,8 @@ class TcpPack:
         self.body = body
         self.direction = 0
         self.key = None
+        self.seconds = seconds
+        self.suseconds = suseconds
 
     def __str__(self):
         return "%s:%d  -->  %s:%d, type:%d, seq:%d, ack:%s size:%d" % \
@@ -117,7 +119,7 @@ def read_ip_pac(link_packet, endian, link_layer_parser):
         return 0, None, None, None
 
 
-def read_tcp_pac(link_packet, byteorder, link_layer_parser):
+def read_tcp_pac(link_packet, byteorder, link_layer_parser, seconds, suseconds):
     """read tcp data.http only build on tcp, so we do not need to support other protocols."""
     state, source, dest, tcp_packet = read_ip_pac(link_packet, byteorder, link_layer_parser)
     if state == 0:
@@ -160,7 +162,7 @@ def read_tcp_pac(link_packet, byteorder, link_layer_parser):
     else:
         pac_type = TcpPack.TYPE_ESTABLISH
 
-    return 1, TcpPack(source, source_port, dest, dest_port, pac_type, seq, ack_seq, body)
+    return 1, TcpPack(source, source_port, dest, dest_port, pac_type, seq, ack_seq, body, seconds, suseconds)
 
 
 def get_link_layer_parser(link_type):
@@ -175,9 +177,9 @@ def get_link_layer_parser(link_type):
 def read_tcp_packet(read_packet):
     """ generator, read a *TCP* package once."""
 
-    for byteorder, link_type, link_packet in read_packet():
+    for byteorder, link_type, link_packet, seconds, suseconds in read_packet():
         link_layer_parser = get_link_layer_parser(link_type)
-        state, pack = read_tcp_pac(link_packet, byteorder, link_layer_parser)
+        state, pack = read_tcp_pac(link_packet, byteorder, link_layer_parser, seconds, suseconds)
         if state == 1 and pack:
             yield pack
             continue

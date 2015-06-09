@@ -32,7 +32,7 @@ class HttpConn:
     def append(self, tcp_pac):
         print("xiaozhen, HttpConn")
         print([tcp_pac,self.source_ip, self.source_port, self.dest_ip, self.dest_port])
-        `print("xiaozhen, HttpConn end ")
+        print("xiaozhen, HttpConn end ")
         if len(tcp_pac.body) == 0:
             return
         #Store the tcp infos, will be used to display

@@ -79,7 +79,7 @@ class AVP:
         self.value    = ""
         self.datatype = ""
         self.name     = ""
-    def output(self):
+    def AVPoutput(self):
         tmp = self.offset
         s   = ""
         while(tmp > 1):
