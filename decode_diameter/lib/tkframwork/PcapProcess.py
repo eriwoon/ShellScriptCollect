@@ -78,7 +78,7 @@ def process_pcap_file(conn_dict, infile):
                 if tcp_pac.pac_type == packet_parser.TcpPack.TYPE_CLOSE:
                     for package in conn_dict[key].tcp_pac_list:
                         msg = Message()
-                        msg.type = 'HTTP'
+                        msg.type = 'http'
                         msg.sourceIP = package[1]
                         msg.sourcePort = package[2]
                         msg.destIP = package[3]
@@ -111,12 +111,12 @@ def process_pcap_file(conn_dict, infile):
                 if(version == 1):
                     #print(version, message_length, command_code)
                     headerinfo, tree = diameterConn.decode(tcp_pac.body)
-                    body = ''
+                    body = headerinfo + '\n'
                     for avp in tree:
-                        body += avp.AVPoutput()
+                        body += avp.AVPoutput() + '\n'
 
                     msg = Message()
-                    msg.type = 'Diameter'
+                    msg.type = 'diameter'
                     msg.sourceIP = tcp_pac.source
                     msg.sourcePort = tcp_pac.source_port
                     msg.destIP = tcp_pac.dest
@@ -138,7 +138,7 @@ def main(filename = None):
     try:
         infile = open(filename, "rb")
         try:
-            yield process_pcap_file(conn_dict, infile)
+            return process_pcap_file(conn_dict, infile)
         finally:
             infile.close()
     finally:

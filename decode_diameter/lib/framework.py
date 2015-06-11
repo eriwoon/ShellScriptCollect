@@ -70,7 +70,7 @@ class myWindow(Frame):
             #create host name
             self.canvasLines.append(self.flow.create_text((pos,10),text = myCanvasList.nodes[i], anchor = 'center'))
             #create vertical lines
-            self.canvasLines.append(self.flow.create_line(pos, 20, pos, lenth, width =  6,fill = 'blue'))
+            self.canvasLines.append(self.flow.create_line(pos, 20, pos, lenth, width =  6,fill = 'grey'))
             self.flow.tag_bind(self.canvasLines[-1], "<Any-Enter>", self.canvasMouseEnter)
             self.flow.tag_bind(self.canvasLines[-1], "<Any-Leave>", self.canvasMouseLeave)
             self.flow.tag_bind(self.canvasLines[-1], "<Button-1>", lambda event,text = myCanvasList.nodes[i]: self.setText(text))
@@ -81,7 +81,13 @@ class myWindow(Frame):
         TEXT  = 'text'
         for i in range(len(myCanvasList.lines)):
             vpos = 50 + i * 100
-            self.canvasLines.append(self.flow.create_line(self.nodePos[myCanvasList.lines[i][START]], vpos, self.nodePos[myCanvasList.lines[i][END]], vpos, width =  6,fill = 'blue', arrow='last'))
+            if(myCanvasList.lines[i]['type'] == 'http'):
+                color = 'blue'
+            elif(myCanvasList.lines[i]['type'] == 'diameter'):
+                color = 'red'
+            else:
+                color = 'burlywood'
+            self.canvasLines.append(self.flow.create_line(self.nodePos[myCanvasList.lines[i][START]], vpos, self.nodePos[myCanvasList.lines[i][END]], vpos, width =  6,fill = color, arrow='last'))
             self.flow.tag_bind(self.canvasLines[-1], "<Any-Enter>", self.canvasMouseEnter)
             self.flow.tag_bind(self.canvasLines[-1], "<Any-Leave>", self.canvasMouseLeave)
             self.flow.tag_bind(self.canvasLines[-1], "<Button-1>", lambda event,text = myCanvasList.lines[i][TEXT]: self.setText(text))
