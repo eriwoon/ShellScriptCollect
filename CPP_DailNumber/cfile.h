@@ -2,44 +2,44 @@
 #define __C_ID_H__
 
 /*
-*   ˵����
-*   ���ļ�Ϊֻ��ģʽ�������޸Ĵ��ļ�
-*   ���������޸�ֻ���� cfile.cpp �ļ�
-*/
+ *   说明：
+ *   本文件为只读模式，请勿修改此文件
+ *   考生所有修改只限于 cfile.cpp 文件
+ */
 
-//�ӿں���������
+//接口函数返回码
 typedef enum _enReturnCode_
 {
-	RT_NOT_IMPLEMENTED = 0,
-	RT_SUCCESS = 1,
-	RT_FAILED = 2,
+    RT_NOT_IMPLEMENTED = 0,
+    RT_SUCCESS = 1,
+    RT_FAILED = 2,
 };
 
 /*
-*   ˵����
-*   ���ļ�Ϊֻ��ģʽ�������޸Ĵ��ļ�
-*   ���������޸�ֻ���� cfile.cpp �ļ�
-*/
+ *   说明：
+ *   本文件为只读模式，请勿修改此文件
+ *   考生所有修改只限于 cfile.cpp 文件
+ */
 
-/*��ʼ�������ӿ�*/
+/*初始化函数接口*/
 void ID_Init(void);
 
-/*������ɺ����ӿ�*/
+/*工作完成函数接口*/
 void ID_Uninit(void);
 
-/*����һ����ϵ�˵Ľӿ�*/
+/*添加一个联系人的接口*/
 int  ID_AddContact(char *pLastName, char *pFirstName, char *pPhoneNumber);
 
-/*��ѯ��ϵ�˵Ľӿ�*/
+/*查询联系人的接口*/
 int  ID_SearchContact(char *pInput, char *pLastName, char *pFirstName, char *pPhoneNumber);
 
-/* ������ں���*/
+/* 测试入口函数*/
 void ID_TestCase();
 
 /*
-*   ˵����
-*   ���ļ�Ϊֻ��ģʽ�������޸Ĵ��ļ�
-*   ���������޸�ֻ���� cfile.cpp �ļ�
-*/
+ *   说明：
+ *   本文件为只读模式，请勿修改此文件
+ *   考生所有修改只限于 cfile.cpp 文件
+ */
 
 #endif

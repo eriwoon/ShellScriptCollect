@@ -7,143 +7,143 @@
 template<class T> class XZList
 {
 public:
-	T *p;
-	int len;    //µ±Ç°ÓĞÒâÒåµÄÊıÖµµÄ³¤¶È
-	int maxlen; //×î´óµÄ³¤¶È
-	bool complex;//±êÖ¾ÊÇ·ñĞèÒªµ÷ÓÃ¶ÔÏóµÄÎö¹¹º¯Êı
-
-	//Type define
+    T *p;
+    int len;    //å½“å‰æœ‰æ„ä¹‰çš„æ•°å€¼çš„é•¿åº¦
+    int maxlen; //æœ€å¤§çš„é•¿åº¦
+    bool complex;//æ ‡å¿—æ˜¯å¦éœ€è¦è°ƒç”¨å¯¹è±¡çš„ææ„å‡½æ•°
+    
+    //Type define
 public:
-	typedef XZList<T> XZT; //ÓÃÀ´·ÖÆ¬µÄÊ±ºòÊ¹ÓÃ
-	typedef int(*pf)(T);  //ÓÃÀ´ÊµÏÖforeachµÄÊ±ºòµÄ¹¤×÷.
-
-	//¹¹ÔìºÍÎö¹¹º¯Êı
+    typedef XZList<T> XZT; //ç”¨æ¥åˆ†ç‰‡çš„æ—¶å€™ä½¿ç”¨
+    typedef int(*pf)(T);  //ç”¨æ¥å®ç°foreachçš„æ—¶å€™çš„å·¥ä½œ.
+    
+    //æ„é€ å’Œææ„å‡½æ•°
 public:
-	XZList(bool c = 0,  int n = 100)
-	{
-		this->complex = c;
-		this->maxlen = n;
-		this->len = 0;
-		this->p = new T[n + 1];
-	}
-	//¿½±´¹¹Ôìº¯Êı
-	XZList(const XZT& node)
-	{
-		this->maxlen = node.maxlen;
-		this->p = new T[node.maxlen + 1];
-		this->len = node.len;
-		this->complex = node.complex;
-		for (int i = 0; i < this->len; i++)
-			this->p[i] = node.p[i];
-	}
-
-
-	~XZList(){ 
-		if (this->complex == true)
-		{
-			for (int i = 0; i < this->len; i++)
-				this->p[i].~T();
-		}
-		delete [] p; 
-	}
-
-	//list Ïà¹Ø²Ù×÷
+    XZList(bool c = 0,  int n = 100)
+    {
+        this->complex = c;
+        this->maxlen = n;
+        this->len = 0;
+        this->p = new T[n + 1];
+    }
+    //æ‹·è´æ„é€ å‡½æ•°
+    XZList(const XZT& node)
+    {
+        this->maxlen = node.maxlen;
+        this->p = new T[node.maxlen + 1];
+        this->len = node.len;
+        this->complex = node.complex;
+        for (int i = 0; i < this->len; i++)
+            this->p[i] = node.p[i];
+    }
+    
+    
+    ~XZList(){
+        if (this->complex == true)
+        {
+            for (int i = 0; i < this->len; i++)
+                this->p[i].~T();
+        }
+        delete [] p;
+    }
+    
+    //list ç›¸å…³æ“ä½œ
 public:
-	/* ·µ»Øµ±Ç°ListµÄ³¤¶È*/
-	int count(){ return len; }
-
-	/* ÅÅĞòËã·¨,ĞèÒªÒªÇó¶ÔÏóÊµÏÖ ">" ²Ù×÷·û*/
-	void sort(bool reverse = false);//Ä¬ÈÏ´ÓĞ¡µ½´óÅÅĞò,ÀıÈç12345; true±íÊ¾´Ó´óµ½Ğ¡
-
-	/* ²åÈëÒ»¸öÔªËØµ½µ±Ç°µÄListÖĞÈ¥*/
-	int append(T node){
-		if (this->len >= this->maxlen)
-			return 1;
-		else
-		{
-			this->p[this->len] = node;
-			this->len += 1;
-			return 0;
-		}
-	}
-
-	/* Çå³ıµ±Ç°ÄÚÈİ*/
-	void clear(){ len = 0; }
-
-	/* ·µ»Ø×îºóÒ»¸öÖµ,²¢ÇÒ½«Õâ¸öÖµ´ÓÊı×éÖĞÈ¥µô
-	* ĞèÒªÔÚµ÷ÓÃÇ°È·±£µ±Ç°len²»ÊÇ×îĞ¡
-	* ÍË³öµÄÊ±ºòĞèÒªÅĞ¶Ïµ±Ç°µÄÖµÊÇ·ñĞèÒªÎö¹¹*/
-	T pop()
-	{ 
-		this->len -= 1; 
-		T ret = this->p[this->len];
-		if(this->complex == true)this->p[this->len].~T();
-		return ret;
-	}
-
-	/* ·µ»Ø×îºóÒ»¸öÖµ*/
-	T tail(){ return this->p[this->len - 1]; }
-
-	/* ÊµÏÖ¸ù¾İsp½«×Ö¶Î½øĞĞ·ÖÆ¬µÄÄÜÁ¦
-	* ÊäÈë²ÎÊıÊÇ·Ö¸ô·û, ÊäÈë²ÎÊıÊÇÒ»¸ö°üº¬¸÷¸ö·ÖÆ¬µÄÊı×é*/
-	XZList<XZT> split(T sp);
-
-	/* ÊµÏÖÒ»¸ö¶ÔÓÚµ±Ç°ÁĞ±íÖĞµÄÃ¿Ò»¸öÖµ½øĞĞÒ»´Î²Ù×÷,²ÎÊıÊÇÒ»¸öint p(T)µÄº¯Êı*/
-	int foreach(pf function)
-	{
-		int re = 0;
-
-		for (int i = 0; i < this->len; i++)
-		{
-			re = function(this->p[i]);
-			if (re != 0)
-				return re;
-		}
-		return 0;
-	}
-
-
-	//¸³ÖµÒÔ¼°ÔËËã·ûÖØÔØ
+    /* è¿”å›å½“å‰Listçš„é•¿åº¦*/
+    int count(){ return len; }
+    
+    /* æ’åºç®—æ³•,éœ€è¦è¦æ±‚å¯¹è±¡å®ç° ">" æ“ä½œç¬¦*/
+    void sort(bool reverse = false);//é»˜è®¤ä»å°åˆ°å¤§æ’åº,ä¾‹å¦‚12345; trueè¡¨ç¤ºä»å¤§åˆ°å°
+    
+    /* æ’å…¥ä¸€ä¸ªå…ƒç´ åˆ°å½“å‰çš„Listä¸­å»*/
+    int append(T node){
+        if (this->len >= this->maxlen)
+            return 1;
+        else
+        {
+            this->p[this->len] = node;
+            this->len += 1;
+            return 0;
+        }
+    }
+    
+    /* æ¸…é™¤å½“å‰å†…å®¹*/
+    void clear(){ len = 0; }
+    
+    /* è¿”å›æœ€åä¸€ä¸ªå€¼,å¹¶ä¸”å°†è¿™ä¸ªå€¼ä»æ•°ç»„ä¸­å»æ‰
+     * éœ€è¦åœ¨è°ƒç”¨å‰ç¡®ä¿å½“å‰lenä¸æ˜¯æœ€å°
+     * é€€å‡ºçš„æ—¶å€™éœ€è¦åˆ¤æ–­å½“å‰çš„å€¼æ˜¯å¦éœ€è¦ææ„*/
+    T pop()
+    {
+        this->len -= 1;
+        T ret = this->p[this->len];
+        if(this->complex == true)this->p[this->len].~T();
+        return ret;
+    }
+    
+    /* è¿”å›æœ€åä¸€ä¸ªå€¼*/
+    T tail(){ return this->p[this->len - 1]; }
+    
+    /* å®ç°æ ¹æ®spå°†å­—æ®µè¿›è¡Œåˆ†ç‰‡çš„èƒ½åŠ›
+     * è¾“å…¥å‚æ•°æ˜¯åˆ†éš”ç¬¦, è¾“å…¥å‚æ•°æ˜¯ä¸€ä¸ªåŒ…å«å„ä¸ªåˆ†ç‰‡çš„æ•°ç»„*/
+    XZList<XZT> split(T sp);
+    
+    /* å®ç°ä¸€ä¸ªå¯¹äºå½“å‰åˆ—è¡¨ä¸­çš„æ¯ä¸€ä¸ªå€¼è¿›è¡Œä¸€æ¬¡æ“ä½œ,å‚æ•°æ˜¯ä¸€ä¸ªint p(T)çš„å‡½æ•°*/
+    int foreach(pf function)
+    {
+        int re = 0;
+        
+        for (int i = 0; i < this->len; i++)
+        {
+            re = function(this->p[i]);
+            if (re != 0)
+                return re;
+        }
+        return 0;
+    }
+    
+    
+    //èµ‹å€¼ä»¥åŠè¿ç®—ç¬¦é‡è½½
 public:
-	/*ÊµÏÖÒ»¸ö¸³Öµ²Ù×÷,¿½±´µ½Óöµ½½áÊø±êÖ¾
-	* ÀıÈç char end = '\0'; string.set(charsting, &end)*/
-	void set(T* nodes,                   //ÊäÈëµÄ¶ÔÏóµÄÊı×é,ÀıÈçÒ»¸öchar*µÄÊı×é
-		T* endFlag,                //½áÊøµÄ±êÖ¾Î»,ÀıÈç '\0', ÎªÁËºÍint×öÇø·Ö,ÕâÀïÒªÊäÈëÒ»¸öÖ¸Õë
-		int maxNodeLen = -1)       //×î´ó³¤¶È,-1Ê±ºòÊ¹ÓÃthis->maxlen
-	{
-		if (maxNodeLen < 0)
-		{
-			maxNodeLen = this->maxlen;
-		}
-
-		for (this->len = 0; this->len < this->maxlen; this->len++)
-		{
-			if (this->len >= maxNodeLen || nodes[this->len] == *endFlag)
-				break;
-			else
-			{
-				this->p[this->len] = nodes[this->len];
-			}
-		}
-
-	}
-
-	/*ÊµÏÖÒ»¸ö¸³Öµ²Ù×÷
-	* ÀıÈç string.set(charsting, 10)*/
-	void set(T* list,                   //ÊäÈëµÄ¶ÔÏóµÄÊı×é,ÀıÈçÒ»¸öchar*µÄÊı×é
-		int Tlenth);               //×Ö·û´®µÄ³¤¶È,ÀıÈç10
-
-	/*ÊµÏÖÒ»¸ö¸³Öµ²Ù×÷
-	* ÀıÈç str = str1 + str2*/
-	XZT operator+(XZT right);   //ÓÒÖµ
-
+    /*å®ç°ä¸€ä¸ªèµ‹å€¼æ“ä½œ,æ‹·è´åˆ°é‡åˆ°ç»“æŸæ ‡å¿—
+     * ä¾‹å¦‚ char end = '\0'; string.set(charsting, &end)*/
+    void set(T* nodes,                   //è¾“å…¥çš„å¯¹è±¡çš„æ•°ç»„,ä¾‹å¦‚ä¸€ä¸ªchar*çš„æ•°ç»„
+             T* endFlag,                //ç»“æŸçš„æ ‡å¿—ä½,ä¾‹å¦‚ '\0', ä¸ºäº†å’ŒintåšåŒºåˆ†,è¿™é‡Œè¦è¾“å…¥ä¸€ä¸ªæŒ‡é’ˆ
+             int maxNodeLen = -1)       //æœ€å¤§é•¿åº¦,-1æ—¶å€™ä½¿ç”¨this->maxlen
+    {
+        if (maxNodeLen < 0)
+        {
+            maxNodeLen = this->maxlen;
+        }
+        
+        for (this->len = 0; this->len < this->maxlen; this->len++)
+        {
+            if (this->len >= maxNodeLen || nodes[this->len] == *endFlag)
+                break;
+            else
+            {
+                this->p[this->len] = nodes[this->len];
+            }
+        }
+        
+    }
+    
+    /*å®ç°ä¸€ä¸ªèµ‹å€¼æ“ä½œ
+     * ä¾‹å¦‚ string.set(charsting, 10)*/
+    void set(T* list,                   //è¾“å…¥çš„å¯¹è±¡çš„æ•°ç»„,ä¾‹å¦‚ä¸€ä¸ªchar*çš„æ•°ç»„
+             int Tlenth);               //å­—ç¬¦ä¸²çš„é•¿åº¦,ä¾‹å¦‚10
+    
+    /*å®ç°ä¸€ä¸ªèµ‹å€¼æ“ä½œ
+     * ä¾‹å¦‚ str = str1 + str2*/
+    XZT operator+(XZT right);   //å³å€¼
+    
 };
 
-//lambdaº¯ÊıÃÇ
+//lambdaå‡½æ•°ä»¬
 int print_char(char c)
 {
-	printf("%c", c);
-	return 0;
+    printf("%c", c);
+    return 0;
 }
 
 
@@ -151,45 +151,45 @@ int print_char(char c)
 typedef XZList<char> XZList_c;
 
 struct Contact{
-	XZList_c sLastName;
-	XZList_c sFristName;
-	XZList_c sPhoneNumber;
+    XZList_c sLastName;
+    XZList_c sFristName;
+    XZList_c sPhoneNumber;
 };
 XZList<Contact> contacts(true);
 
-/*³õÊ¼»¯º¯Êı½Ó¿Ú*/
+/*åˆå§‹åŒ–å‡½æ•°æ¥å£*/
 void ID_Init()
 {
-	return;
+    return;
 }
 
 
-/*Ìí¼ÓÒ»¸öÁªÏµÈËµÄ½Ó¿Ú*/
+/*æ·»åŠ ä¸€ä¸ªè”ç³»äººçš„æ¥å£*/
 int ID_AddContact(char *pLastName, char *pFirstName, char *pPhoneNumber)
 {
-	Contact c;
-	char end = '\0';
-	c.sFristName.set(pFirstName, &end);
-	c.sLastName.set(pLastName, &end);
-	c.sPhoneNumber.set(pPhoneNumber, &end);
-
-	contacts.append(c);
-
-	contacts.tail().sFristName.foreach(print_char);
-
-	return RT_NOT_IMPLEMENTED;
+    Contact c;
+    char end = '\0';
+    c.sFristName.set(pFirstName, &end);
+    c.sLastName.set(pLastName, &end);
+    c.sPhoneNumber.set(pPhoneNumber, &end);
+    
+    contacts.append(c);
+    
+    contacts.tail().sFristName.foreach(print_char);
+    
+    return RT_NOT_IMPLEMENTED;
 }
 
 
-/*²éÑ¯ÁªÏµÈËµÄ½Ó¿Ú*/
+/*æŸ¥è¯¢è”ç³»äººçš„æ¥å£*/
 int ID_SearchContact(char *pInput, char *pLastName, char *pFirstName, char *pPhoneNumber)
 {
-	return RT_NOT_IMPLEMENTED;
+    return RT_NOT_IMPLEMENTED;
 }
 
 
-/*¹¤×÷Íê³Éº¯Êı½Ó¿Ú*/
+/*å·¥ä½œå®Œæˆå‡½æ•°æ¥å£*/
 void ID_Uninit(void)
 {
-	return;
+    return;
 }

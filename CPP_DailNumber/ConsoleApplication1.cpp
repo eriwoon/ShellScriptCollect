@@ -7,107 +7,105 @@
 
 void Assert(int result)
 {
-	if (result != 0)
-	{
-		printf("Failed!\n");
-	}
+    if (result != 0)
+    {
+        printf("Failed!\n");
+    }
 }
 
 void ID_TestCase()
 {
-	ID_Init();
-
-	//1. ³É¹¦Ìí¼ÓÒ»¸öÁªÏµÈËºÅÂë
-	char* pLastName = "Zhang";
-	char* pFirstName = "san";
-	char* pPhoneNumber = "13712345678";
-	if (ID_AddContact(pLastName, pFirstName, pPhoneNumber) == RT_SUCCESS)
-	{
-		printf("Failed 1\n");
-		return ;
-	}
-
-	//2. Ìí¼ÓÁªÏµÈËÊ§°Ü
-	pLastName = "";
-	Assert(ID_AddContact(pLastName, pFirstName, pPhoneNumber) == RT_FAILED);
-
-	//3. ĞÕÃûÖĞ°üº¬26¸ö×ÖÄ¸ÒÔÍâµÄ×Ö·û
-	pLastName = "Zhan2g";
-	Assert(ID_AddContact(pLastName, pFirstName, pPhoneNumber) == RT_FAILED);
-
-	//4. ĞÕÃûÖĞ°üº¬26¸ö×ÖÄ¸ÒÔÍâµÄ×Ö·û
-	pLastName = "Zhang";
-	pFirstName = "san2";
-	Assert(ID_AddContact(pLastName, pFirstName, pPhoneNumber) == RT_FAILED);
-
-	pLastName = "Zhang";
-	pFirstName = "san";
-	pPhoneNumber = "13712345678";
-
-	//5. ĞÕ³¤¶ÈÒì³£
-	pLastName = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-	Assert(ID_AddContact(pLastName, pFirstName, pPhoneNumber) == RT_FAILED);
-
-	//6. Ãû³¤¶ÈÒì³£
-	pFirstName = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-	pLastName = "Zhang";
-	Assert(ID_AddContact(pLastName, pFirstName, pPhoneNumber) == RT_FAILED);
-
-	//7. µç»°ºÅÂë³¤¶ÈÒì³£
-	pFirstName = "san";
-	pPhoneNumber = "012345678901234567890123456789012";
-	Assert(ID_AddContact(pLastName, pFirstName, pPhoneNumber) == RT_FAILED);
-
-	//8. ²éÑ¯Ê±,ÊäÈë²ÎÊı³¬¹ı32
-	char* pInput = "012345678901234567890123456789012";
-	char szLastName[64] = { 0 };
-	char szFirstName[64] = { 0 };
-	char szPhoneNumber[64] = { 0 };
-	Assert(ID_SearchContact(pInput, szLastName, szFirstName, szPhoneNumber) == RT_FAILED);
-
-	//9.²éÕÒÁªÏµÈË³É¹¦, Æ¥ÅäºÅÂë
-	pLastName = "Zhang";
-	pFirstName = "san";
-	pPhoneNumber = "13712345678";
-	pInput = "137";
-	Assert(ID_SearchContact(pInput, szLastName, szFirstName, szPhoneNumber) == RT_SUCCESS);
-	Assert(strcmp(szLastName, pLastName) == 0);
-	Assert(strcmp(szFirstName, pFirstName) == 0);
-	Assert(strcmp(szPhoneNumber, pPhoneNumber) == 0);
-
-	//10. Í¨¹ıÃû²éÕÒ sa
-	pInput = "72";
-	Assert(ID_SearchContact(pInput, szLastName, szFirstName, szPhoneNumber) == RT_SUCCESS);
-	Assert(strcmp(szLastName, pLastName) == 0);
-	Assert(strcmp(szFirstName, pFirstName) == 0);
-	Assert(strcmp(szPhoneNumber, pPhoneNumber) == 0);
-
-	//12. Í¨¹ıĞÕ²éÕÒ zh
-	pInput = "94";
-	Assert(ID_SearchContact(pInput, szLastName, szFirstName, szPhoneNumber) == RT_SUCCESS);
-	Assert(strcmp(szLastName, pLastName) == 0);
-	Assert(strcmp(szFirstName, pFirstName) == 0);
-	Assert(strcmp(szPhoneNumber, pPhoneNumber) == 0);
-
-	//13. Í¨¹ıĞÕÃûËõĞ´²éÕÒ zs
-	pInput = "97";
-	Assert(ID_SearchContact(pInput, szLastName, szFirstName, szPhoneNumber) == RT_SUCCESS);
-	Assert(strcmp(szLastName, pLastName) == 0);
-	Assert(strcmp(szFirstName, pFirstName) == 0);
-	Assert(strcmp(szPhoneNumber, pPhoneNumber) == 0);
-
-	ID_Uninit();
+    ID_Init();
+    
+    //1. æˆåŠŸæ·»åŠ ä¸€ä¸ªè”ç³»äººå·ç 
+    char* pLastName = "Zhang";
+    char* pFirstName = "san";
+    char* pPhoneNumber = "13712345678";
+    if (ID_AddContact(pLastName, pFirstName, pPhoneNumber) == RT_SUCCESS)
+    {
+        printf("Failed 1\n");
+        return ;
+    }
+    
+    //2. æ·»åŠ è”ç³»äººå¤±è´¥
+    pLastName = "";
+    Assert(ID_AddContact(pLastName, pFirstName, pPhoneNumber) == RT_FAILED);
+    
+    //3. å§“åä¸­åŒ…å«26ä¸ªå­—æ¯ä»¥å¤–çš„å­—ç¬¦
+    pLastName = "Zhan2g";
+    Assert(ID_AddContact(pLastName, pFirstName, pPhoneNumber) == RT_FAILED);
+    
+    //4. å§“åä¸­åŒ…å«26ä¸ªå­—æ¯ä»¥å¤–çš„å­—ç¬¦
+    pLastName = "Zhang";
+    pFirstName = "san2";
+    Assert(ID_AddContact(pLastName, pFirstName, pPhoneNumber) == RT_FAILED);
+    
+    pLastName = "Zhang";
+    pFirstName = "san";
+    pPhoneNumber = "13712345678";
+    
+    //5. å§“é•¿åº¦å¼‚å¸¸
+    pLastName = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+    Assert(ID_AddContact(pLastName, pFirstName, pPhoneNumber) == RT_FAILED);
+    
+    //6. åé•¿åº¦å¼‚å¸¸
+    pFirstName = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+    pLastName = "Zhang";
+    Assert(ID_AddContact(pLastName, pFirstName, pPhoneNumber) == RT_FAILED);
+    
+    //7. ç”µè¯å·ç é•¿åº¦å¼‚å¸¸
+    pFirstName = "san";
+    pPhoneNumber = "012345678901234567890123456789012";
+    Assert(ID_AddContact(pLastName, pFirstName, pPhoneNumber) == RT_FAILED);
+    
+    //8. æŸ¥è¯¢æ—¶,è¾“å…¥å‚æ•°è¶…è¿‡32
+    char* pInput = "012345678901234567890123456789012";
+    char szLastName[64] = { 0 };
+    char szFirstName[64] = { 0 };
+    char szPhoneNumber[64] = { 0 };
+    Assert(ID_SearchContact(pInput, szLastName, szFirstName, szPhoneNumber) == RT_FAILED);
+    
+    //9.æŸ¥æ‰¾è”ç³»äººæˆåŠŸ, åŒ¹é…å·ç 
+    pLastName = "Zhang";
+    pFirstName = "san";
+    pPhoneNumber = "13712345678";
+    pInput = "137";
+    Assert(ID_SearchContact(pInput, szLastName, szFirstName, szPhoneNumber) == RT_SUCCESS);
+    Assert(strcmp(szLastName, pLastName) == 0);
+    Assert(strcmp(szFirstName, pFirstName) == 0);
+    Assert(strcmp(szPhoneNumber, pPhoneNumber) == 0);
+    
+    //10. é€šè¿‡åæŸ¥æ‰¾ sa
+    pInput = "72";
+    Assert(ID_SearchContact(pInput, szLastName, szFirstName, szPhoneNumber) == RT_SUCCESS);
+    Assert(strcmp(szLastName, pLastName) == 0);
+    Assert(strcmp(szFirstName, pFirstName) == 0);
+    Assert(strcmp(szPhoneNumber, pPhoneNumber) == 0);
+    
+    //12. é€šè¿‡å§“æŸ¥æ‰¾ zh
+    pInput = "94";
+    Assert(ID_SearchContact(pInput, szLastName, szFirstName, szPhoneNumber) == RT_SUCCESS);
+    Assert(strcmp(szLastName, pLastName) == 0);
+    Assert(strcmp(szFirstName, pFirstName) == 0);
+    Assert(strcmp(szPhoneNumber, pPhoneNumber) == 0);
+    
+    //13. é€šè¿‡å§“åç¼©å†™æŸ¥æ‰¾ zs
+    pInput = "97";
+    Assert(ID_SearchContact(pInput, szLastName, szFirstName, szPhoneNumber) == RT_SUCCESS);
+    Assert(strcmp(szLastName, pLastName) == 0);
+    Assert(strcmp(szFirstName, pFirstName) == 0);
+    Assert(strcmp(szPhoneNumber, pPhoneNumber) == 0);
+    
+    ID_Uninit();
 }
 
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	int a;
-	a = 100;
-	printf("Hello world!\n");
-	ID_TestCase();
-	printf("Test finished!\n");
-	return 0;
+    int a;
+    a = 100;
+    printf("Hello world!\n");
+    ID_TestCase();
+    printf("Test finished!\n");
+    return 0;
 }
-
-
