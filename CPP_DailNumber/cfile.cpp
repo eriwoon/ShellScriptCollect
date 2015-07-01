@@ -1,8 +1,13 @@
+#ifdef _WIN32
 #include "stdafx.h"
+#endif
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "cfile.h"
+#include <vector>
+
+//int g_id = 0;
 
 template<class T> class XZList
 {
@@ -11,6 +16,7 @@ public:
     int len;    //当前有意义的数值的长度
     int maxlen; //最大的长度
     bool complex;//标志是否需要调用对象的析构函数
+    int id;      //检查析构函数时候用的,总是释放空指针,这里检查一下
     
     //Type define
 public:
@@ -19,18 +25,35 @@ public:
     
     //构造和析构函数
 public:
-    XZList(bool c = 0,  int n = 100)
+    XZList(bool c = 0,  int n = 1000)
     {
+        //id = g_id + 10000;
+        //printf("create %d\n",id);
+        //g_id += 1;
         this->complex = c;
         this->maxlen = n;
         this->len = 0;
-        this->p = new T[n + 1];
+        this->p = 0;
     }
     //拷贝构造函数
     XZList(const XZT& node)
     {
+        //id = g_id + 20000;
+        //printf("create %d\n",id);
+        //g_id += 1;
         this->maxlen = node.maxlen;
         this->p = new T[node.maxlen + 1];
+        this->len = node.len;
+        this->complex = node.complex;
+        for (int i = 0; i < this->len; i++)
+            this->p[i] = node.p[i];
+    }
+    
+    void operator=(XZT node)
+    {
+        this->maxlen = node.maxlen;
+        if(this->p == 0)
+            this->p = new T[node.maxlen + 1];
         this->len = node.len;
         this->complex = node.complex;
         for (int i = 0; i < this->len; i++)
@@ -44,7 +67,12 @@ public:
             for (int i = 0; i < this->len; i++)
                 this->p[i].~T();
         }
-        delete [] p;
+        //printf("delete %d\n",this->id);
+        if(p != 0)
+        {
+            delete [] p;
+            p = 0;
+        }
     }
     
     //list 相关操作
@@ -56,7 +84,9 @@ public:
     void sort(bool reverse = false);//默认从小到大排序,例如12345; true表示从大到小
     
     /* 插入一个元素到当前的List中去*/
-    int append(T node){
+    int append(T& node){
+        if(this->p == 0)
+            this->p = new T[this->maxlen + 1];
         if (this->len >= this->maxlen)
             return 1;
         else
@@ -68,7 +98,15 @@ public:
     }
     
     /* 清除当前内容*/
-    void clear(){ len = 0; }
+    void clear()
+    {
+        if (this->complex == true)
+        {
+            for (int i = 0; i < this->len; i++)
+                this->p[i].~T();
+        }
+        len = 0;
+    }
     
     /* 返回最后一个值,并且将这个值从数组中去掉
      * 需要在调用前确保当前len不是最小
@@ -111,6 +149,8 @@ public:
              T* endFlag,                //结束的标志位,例如 '\0', 为了和int做区分,这里要输入一个指针
              int maxNodeLen = -1)       //最大长度,-1时候使用this->maxlen
     {
+        if(this->p == 0)
+        this->p = new T[this->maxlen + 1];
         if (maxNodeLen < 0)
         {
             maxNodeLen = this->maxlen;
@@ -150,10 +190,26 @@ int print_char(char c)
 
 typedef XZList<char> XZList_c;
 
-struct Contact{
+class Contact{
+public:
     XZList_c sLastName;
     XZList_c sFristName;
     XZList_c sPhoneNumber;
+    
+public:
+    Contact(const Contact& c)
+    {
+        this->sFristName = c.sFristName;
+        this->sLastName  = c.sLastName;
+        this->sPhoneNumber = c.sPhoneNumber;
+    }
+    void operator=(Contact c)
+    {
+        this->sFristName = c.sFristName;
+        this->sLastName  = c.sLastName;
+        this->sPhoneNumber = c.sPhoneNumber;
+    }
+    Contact(){}
 };
 XZList<Contact> contacts(true);
 
@@ -173,9 +229,11 @@ int ID_AddContact(char *pLastName, char *pFirstName, char *pPhoneNumber)
     c.sLastName.set(pLastName, &end);
     c.sPhoneNumber.set(pPhoneNumber, &end);
     
+    
     contacts.append(c);
     
-    contacts.tail().sFristName.foreach(print_char);
+    //contacts.tail().sFristName.foreach(print_char);
+    printf("\n");
     
     return RT_NOT_IMPLEMENTED;
 }

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		07F3CB191B44929800B72C62 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07F3CB181B44929800B72C62 /* main.cpp */; };
 		07F3CB201B4492C300B72C62 /* cfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07F3CB1F1B4492C300B72C62 /* cfile.cpp */; };
-		07F3CB231B449A2B00B72C62 /* ConsoleApplication1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07F3CB221B449A2B00B72C62 /* ConsoleApplication1.cpp */; };
+		07F3CB251B449AD800B72C62 /* testcases.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07F3CB241B449AD800B72C62 /* testcases.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,7 +29,8 @@
 		07F3CB181B44929800B72C62 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		07F3CB1F1B4492C300B72C62 /* cfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cfile.cpp; path = ../../cfile.cpp; sourceTree = "<group>"; };
 		07F3CB211B4492D500B72C62 /* cfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cfile.h; path = ../../cfile.h; sourceTree = "<group>"; };
-		07F3CB221B449A2B00B72C62 /* ConsoleApplication1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConsoleApplication1.cpp; path = ../../ConsoleApplication1.cpp; sourceTree = "<group>"; };
+		07F3CB241B449AD800B72C62 /* testcases.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testcases.cpp; sourceTree = SOURCE_ROOT; };
+		07F3CB261B449B6200B72C62 /* testcases.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testcases.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +63,11 @@
 		07F3CB171B44929800B72C62 /* CPP_DailNumber */ = {
 			isa = PBXGroup;
 			children = (
-				07F3CB221B449A2B00B72C62 /* ConsoleApplication1.cpp */,
 				07F3CB211B4492D500B72C62 /* cfile.h */,
 				07F3CB1F1B4492C300B72C62 /* cfile.cpp */,
 				07F3CB181B44929800B72C62 /* main.cpp */,
+				07F3CB241B449AD800B72C62 /* testcases.cpp */,
+				07F3CB261B449B6200B72C62 /* testcases.h */,
 			);
 			path = CPP_DailNumber;
 			sourceTree = "<group>";
@@ -127,8 +129,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F3CB191B44929800B72C62 /* main.cpp in Sources */,
+				07F3CB251B449AD800B72C62 /* testcases.cpp in Sources */,
 				07F3CB201B4492C300B72C62 /* cfile.cpp in Sources */,
-				07F3CB231B449A2B00B72C62 /* ConsoleApplication1.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
