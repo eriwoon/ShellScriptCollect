@@ -67,6 +67,14 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 "
 map <C-t> :NERDTree<cr>
+map <leader>t :NERDTree<cr>
+" map the multi-tab commands
+map <leader>w <C-w>
+map <leader>h <C-w>h
+map <leader>l <C-w>l
+map <leader>j <C-w>j
+map <leader>k <C-w>k
+
 
 "Run command according to different filetype
 func! Run()
