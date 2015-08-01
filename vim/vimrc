@@ -11,6 +11,7 @@ set expandtab
 set autoindent
 "To enable/disable folding use Vim's standard folding configuration.
 set nofoldenable
+set hlsearch
 
 let mapleader = ','
 

@@ -21,7 +21,8 @@ class MyCanvasList():
         END   = 'end'
         TEXT  = 'text'
         TYPE  = 'type'
-        
+        INFO  = 'INFO'
+
         if(filename == None):
             self.nodes = ["192.168.100.100", "192.168.100.101", "1.1.1.1"]
             self.lines = [
@@ -32,23 +33,29 @@ class MyCanvasList():
         else:
             self.nodes = []
             self.lines = []
-            dic_node = {}
             conn_dict = OrderedDict()
             infile = open(filename, "rb")
             for msg in PcapProcess.process_pcap_file(conn_dict, infile):
                 if msg.sourceIP not in self.nodes:
-                    self.nodes.append(msg.sourceIP)
-                    dic_node[msg.sourceIP] = len(self.nodes) - 1
+                    self.nodes.insert(0, msg.sourceIP)
                 if msg.destIP not in self.nodes:
                     self.nodes.append(msg.destIP)
-                    dic_node[msg.destIP] = len(self.nodes) - 1
 
-                self.lines.append({START: dic_node[msg.sourceIP],
-                                   END:   dic_node[msg.destIP],
+                self.lines.append({START: msg.sourceIP,
+                                   END:   msg.destIP,
                                    TEXT:  msg.body,
                                    TYPE:  msg.type})
 
-            
+
+            dic_node = {}
+            for i in range(len(self.nodes)):
+                dic_node[self.nodes[i]] = i
+
+            for record in self.lines:
+                record[START] = dic_node[record[START]]
+                record[END]   = dic_node[record[END]]
+
+
 def main():
     myCanvasList = MyCanvasList('1.pcap')
     

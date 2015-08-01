@@ -100,7 +100,7 @@ def process_pcap_file(conn_dict, infile):
                 if utils.is_request(tcp_pac.body):
                     conn_dict[key] = HttpConn(tcp_pac)
 
-        elif(tcp_pac.source_port in (6553,16553) or tcp_pac.dest_port in (6553,16553)):
+        elif(tcp_pac.source_port in (6553,16553,3868) or tcp_pac.dest_port in (3868,6553,16553)):
             if len(tcp_pac.body) > 20:
                 version = struct.unpack('!b',tcp_pac.body[0:1])[0]
                 message_length = struct.unpack('!I',b'\x00' + tcp_pac.body[1:4])[0]
