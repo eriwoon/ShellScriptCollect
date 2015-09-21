@@ -3,6 +3,7 @@ filetype on                   " required
 syntax on
 "colorscheme molokai
 set background=dark
+"set background=light
 colorscheme solarized
 
 "set tab to 4 spaces
@@ -12,7 +13,13 @@ set autoindent
 "To enable/disable folding use Vim's standard folding configuration.
 set nofoldenable
 set hlsearch
-
+" " 显示光标当前位置
+set ruler
+" " 开启行号显示
+set number
+" " 高亮显示当前行/列
+set cursorline
+"set cursorcolume
 let mapleader = ','
 
 " set the runtime path to include Vundle and initialize
@@ -52,6 +59,18 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
+" 接口与实现快速切换
+Plugin 'https://github.com/vim-scripts/a.vim'
+" *.cpp 和 *.h 间切换
+nmap <Leader>ch :A<CR>
+" " 子窗口中显示 *.cpp 或 *.h
+nmap <Leader>sch :AS<CR>
+
+"显示书签的插件
+Plugin 'https://github.com/kshenoy/vim-signature'
+" m[a-zA-Z] 添加/删除书签
+" `[a-zA-Z] 跳转到书签
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -67,7 +86,6 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 "
-map <C-t> :NERDTree<cr>
 map <leader>t :NERDTree<cr>
 " map the multi-tab commands
 map <leader>w <C-w>
@@ -88,11 +106,15 @@ endfunc
 
 map <F5> :call Run()<CR>
 
+"使用'y[数字]<cr>可以复制一个块
+"使用+p可以粘贴
+"
 
 
-
-
-
-
-
-
+" " 显示光标当前位置
+set ruler
+" " 开启行号显示
+set number
+" " 高亮显示当前行/列
+set cursorline
+" set cursorcolumn
