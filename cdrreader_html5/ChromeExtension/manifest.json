@@ -1,0 +1,21 @@
+{
+   "name": "name XZReadBook",
+   "short_name" : "short_name XZRB",
+   "description": "description null",
+   "version": "1.0",
+   "manifest_version" : 2,
+
+   "browser_action": {
+      "default_icon": "icon/Star_32px_1194835_easyicon.net.png",
+      "default_popup": "popup.html",
+      "default_title": "default_title XZReadBook"
+   },
+
+   "icons": {
+      "128": "icon/Star_128px_1194835_easyicon.net.png",
+      "48": "icon/Star_32px_1194835_easyicon.net.png"
+   },
+
+   "permissions": [ "tabs", "storage", "\u003Call_urls>" ]
+   //"update_url": "https://clients2.google.com/service/update2/crx",
+}

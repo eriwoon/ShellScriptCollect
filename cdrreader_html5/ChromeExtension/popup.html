@@ -1,0 +1,39 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+-->
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Html Title my extension</title>
+
+  <script src="js/jquery-3.1.0.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="css/bootstrap-theme.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="js/bootstrap.js"></script>
+  <script src="js/log4js.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/popup.css">
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+    -->
+    <script src="js/popup.js"></script>
+  </head>
+  <body>
+    <span class="label label-default xz-center">欢迎你</span>
+    <button type="button" class="btn btn-default xz-center" id="btnRead">阅读本页</button>
+    <button type="button" class="btn btn-default xz-center" id="btnBookmark">书签与配置</button>
+  </body>
+  </html>
+
