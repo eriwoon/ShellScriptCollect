@@ -1,6 +1,6 @@
 'use strict';
 
-var log4js = new Log(Log.DEBUG, Log.popupLogger);
+var log4js = new Log(Log.DEBUG, Log.remoteLogger);
 log4js.debug("inject start")
 
 
