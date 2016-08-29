@@ -11,18 +11,9 @@ html(lang="zh-cn")
     script(src="js/log4js.js")
     
     link(rel="stylesheet" href="css/log.css")
-    title Log Viewer
+    title Marsala Log Viewer
   body
     script(src="js/log.js")
-    table.table.table-striped.table-bordered
-      th Timestamp
-      th Level
-      th Message
-      each val in log
-        tr
-          td.date= val.date
-          td.level= val.level
-          td.msg= val.msg
     
     table#log.table.table-striped.table-bordered
       th Timestamp

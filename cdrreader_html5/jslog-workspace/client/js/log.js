@@ -1,7 +1,7 @@
 'use strict';
 /*global $ Log*/
 window.log4js = (window.log4js || new Log(Log.DEBUG, Log.remoteLogger));
-
+window.log4js.debug = function(){};
 $().ready(function(){
   //bind click to clear
   $("#clear").click(function(){
@@ -19,7 +19,7 @@ $().ready(function(){
         console.log(errorThrown);
       }
     });
-    window.location.reload(false);
+    refresh();
   });
   
   $("#refresh").click(function(){
@@ -34,11 +34,15 @@ $().ready(function(){
       success: function(data){
         window.log4js.debug("LOG Page:refresh clicked,result Success");
         var log = JSON.parse(data);
+
+        //remove current trs
+        $("#log tr.c").remove();
+
         for(var rec in log){
-          var tr = $("#log").append(document.createElement("tr"));
-          tr.append("<td class='date'>" + log[rec].date + "</td>");
-          tr.append("<td class='level'>" + log[rec].level + "</td>");
-          tr.append("<td class='msg'>" + log[rec].msg + "</td>");
+          var tr = $("#log").append("<tr class='c'>" +
+            "<td class='date'>" + log[rec].date + "</td>" +
+            "<td class='level'>" + log[rec].level + "</td>" + 
+            "<td class='msg'>" + log[rec].msg + "</td>" + "</tr>");
         }
       },
       error: function(jqXHR,textStatus,errorThrown){
@@ -50,5 +54,11 @@ $().ready(function(){
       }
     });
   }
+
+  var periodicRefresh = function(time){
+    refresh();
+    setTimeout(periodicRefresh, time || 300);
+  };
+  periodicRefresh();
 });
 

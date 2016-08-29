@@ -34,7 +34,7 @@ log.push({date:getDate(),level:"INFO Server",msg:"Start loging..."});
 
 app.get("/log", function(req,res){
   //send html to client
-  log.push({date:getDate(),level:"INFO Server",msg:"Received GET request to /log."});
+  //log.push({date:getDate(),level:"INFO Server",msg:"Received GET request to /log."});
   var fn = jade.compileFile("view/log.jade",{});
   var html = fn({"log":log});
   res.send(html);
@@ -43,7 +43,7 @@ app.get("/log", function(req,res){
 app.get("/log/content", function(req,res){
   //send log variable to client
   //called by ajax at client side
-  log.push({date:getDate(),level:"INFO Server",msg:"Received GET request to /log/content."});
+  //log.push({date:getDate(),level:"INFO Server",msg:"Received GET request to /log/content."});
   res.send(JSON.stringify(log));
 });
 
@@ -59,5 +59,5 @@ app.delete("/log",function(req,res){
 })
 
 var server = app.listen(process.env.PORT || 80,function(){
-  console.log("Server Started, listening...");
+  console.log("Server Started, listening on port 80...");
 });

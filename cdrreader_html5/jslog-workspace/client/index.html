@@ -8,6 +8,7 @@
     <style>
       body {
         padding-top: 60px;
+        background-color: #955251;
       }
     </style>
     <script>
@@ -16,7 +17,7 @@
 
         $scope.messages = [];
         $scope.roster = [];
-        $scope.name = '';
+        $scope.name = ''; 
         $scope.text = '';
 
         socket.on('connect', function () {
