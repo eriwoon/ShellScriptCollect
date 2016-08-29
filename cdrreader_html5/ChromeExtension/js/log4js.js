@@ -243,7 +243,7 @@ Log.remoteLogger = function(msg,level,obj) {
 
   $.ajax({
     type: "post",
-    url: "//127.0.0.1/log/",
+    url: "http://127.0.0.1/log/",
     data: JSON.stringify(data),
     contentType: "application/json; charset=utf-8",
     dataType:"json",
