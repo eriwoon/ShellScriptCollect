@@ -38,7 +38,7 @@ $().ready(function(){
         //remove current trs
         $("#log tr.c").remove();
 
-        for(var rec in log){
+        for(var rec = log.length - 1 ; rec >= 0; rec --){
           var tr = $("#log").append("<tr class='c'>" +
             "<td class='date'>" + log[rec].date + "</td>" +
             "<td class='level'>" + log[rec].level + "</td>" + 

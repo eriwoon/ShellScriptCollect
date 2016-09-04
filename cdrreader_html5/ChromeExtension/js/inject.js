@@ -57,8 +57,8 @@ $( document ).ready(function(){
 */
 var handlePage = function(pageurl){
   log4js.debug("Inject:Enter function handlePage");
-  var r = $('body').html();
-  handleContent(r);
+  var bodyContent = $('body');
+  handleContent(bodyContent);
   if(rjs!=null && rjs != ""){
     eval(rjs);
   }
@@ -67,17 +67,14 @@ var handlePage = function(pageurl){
 
 /*remove useless DOMs
 */
-var handleContent = function(bodytxt){
+var handleContent = function(bodyContent){
   log4js.debug("Inject:Enter function handleContent");
-  //console.log(response.responseText);
-  var dummy = $("<div id='dummy'></div>");
-  dummy.append(bodytxt);
 
   //Remove script
-  dummy.find('script').remove();
+  bodyContent.find('script').remove();
   //Remove redundancy
-  dummy.find('link').remove();
-  dummy.find('ins').remove();
+  bodyContent.find('link').remove();
+  bodyContent.find('ins').remove();
 
   //Remove items
   //dummy.find('table').remove();
@@ -110,13 +107,13 @@ var handleContent = function(bodytxt){
 
   //console.log(jres);
   //console.log(cbody.text());
-  if(judgePage(dummy)){
+  if(judgePage(bodyContent)){
     // Your code here...
-    dummy.find('iframe').remove();
-    dummy.find('iframe').css('display','none!important');
+    bodyContent.find('iframe').remove();
+    bodyContent.find('iframe').css('display','none!important');
     log4js.debug("Inject:Suppose it is in one Novel Page, I guess.");
     //To extract the content and navigations
-    targets = nextractContent(dummy);
+    targets = nextractContent(bodyContent);
 				// Got the next page's key info
   } else {
     log4js.debug("Inject:Not one Novel Page, I guess.["+jres[1]+"]");
@@ -260,7 +257,7 @@ var nextractContent = function(ctn) {
     log4js.debug("Inject:no title found.");
 
   //b: Nav
-  var cNavNext    = [];
+  var cNavNext = [];
   // If customized
   // All possible title filter, With higher priority
   console.log('rnlist');
@@ -271,11 +268,11 @@ var nextractContent = function(ctn) {
     }
   });
 
-  if(cNavNext.length==0) {
+  if(cNavNext.length == 0) {
     var cNextReg = '.*[下|后]\s*一*\s*[章|回|页|节].*';
     //cNavNext = ctn.find("span, a, button").filter(function(){return $(this).text().match('.*[下|后]\s*一*\s*[章|回|页|节].*')!=null;}).filter(':last');
     cNavNext = ctn.find("span, a, button").filter(function(){return ($(this).is('[href]') && ($(this).text().match(cNextReg)!=null));}).filter(':last');
-    if(cNavNext.length==0)
+    if(cNavNext.length == 0)
       cNavNext = ctn.find("span, a, button").filter(function(){return ($(this).is('[href]') && $(this).text().match('.*[下|后]\s*一*\s*[章|回|页|节].*')!=null);}).filter(':last');
   }
   console.log("cNavNext");
@@ -302,11 +299,11 @@ var nextractContent = function(ctn) {
   $('link').remove();
   $('script').remove();
   $('table').filter(function(index){
-	if($(this).text().match('.*[下|后]\s*一*\s*[章|回|页].*')) {
-	  return false;
-	} else {
-	  return true;
-	}
+    if($(this).text().match('.*[下|后]\s*一*\s*[章|回|页].*')) {
+      return false;
+    } else {
+      return true;
+    }
   }).remove();
 
   //var retarr = [cTitle.clone(), cNavIndex.clone(), cNavPrev.clone(), cNavNext.clone(), null];
@@ -372,6 +369,10 @@ var nextractContent = function(ctn) {
     return $("<div />", {html: $(this).html().replace(/\n/g,"<br><br>")});
   });
 
+  // remove the color css
+  rtContent.find("*").css("color", "");
+  // remvoe all super links
+  rtContent.find("a").remove();
   /* Debug Purpose
    cTitle.css('background', 'red'); 
    cNavPrev.css('background', 'yellow'); 

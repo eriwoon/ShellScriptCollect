@@ -1,0 +1,38 @@
+#xz_full {
+    font-family: "Helvetica Neue",Verdana,Arial,"Hiragino Sans GB","WenQuanYi Micro Hei","Heiti SC",STHeiti,"Microsoft Yahei",SimSun,sans-serif;
+    background-color:#FAF7ED;
+}
+
+#xz_content {
+    width:80%;
+    padding: 5%, 0;
+
+    font-size:20px;
+    color: #333;
+    background-color: #FAF7ED;
+}
+
+#xz_nav {
+    position:fixed;
+    right:0px;
+    bottom:10px;
+    color: #fff;
+}
+#xz_nav a{
+    text-decoration: none;
+    margin-bottom:20px;
+    color:#333;
+    background:#fff;
+    padding-right: 20px;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-left:2px solid green;
+    text-align:right;
+    width:120px;
+}
+#xz_nav a:hover{
+    cursor:pointer;
+    border-left:2px solid #955251;
+
+}
