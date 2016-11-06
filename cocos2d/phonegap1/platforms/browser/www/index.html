@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello Cocos2d-JS</title>
+</head>
+<body>   
+    <canvas id="gameCanvas"></canvas>
+    <script type="text/javascript" src="cocos2d-js-v3.12.js" charset="UTF-8"></script>
+    <script type="text/javascript">
+          window.onload = function(){
+              var windowWidth = window.innerWidth;
+              var windowHeight = window.innerHeight;
+              var pixelRatio = window.devicePixelRatio || 1; /// get pixel ratio of device
+
+              canvasMain = document.getElementById("gameCanvas");
+
+              canvasMain.width = windowWidth * pixelRatio;   /// resolution of canvas
+              canvasMain.height = windowHeight * pixelRatio;
+
+              canvasMain.style.width = windowWidth + 'px';   /// CSS size of canvas
+              canvasMain.style.height = windowHeight + 'px';
+
+              cc.game.onStart = function(){
+                  //load resources
+                  cc.LoaderScene.preload(["HelloWorld.png"], function () {
+                      var MyScene = cc.Scene.extend({
+                          onEnter:function () {
+                              this._super();
+                              var size = cc.director.getWinSize();
+                              var sprite = cc.Sprite.create("HelloWorld.png");
+                              sprite.setPosition(size.width / 2, size.height / 2);
+                              sprite.setScale(10);
+                              this.addChild(sprite, 0);
+
+                              var label = cc.LabelTTF.create(canvasMain.style.width + "X" + canvasMain.style.height + " " + canvasMain.width + "X" + canvasMain.height , "Arial", 40);
+                              label.setPosition(size.width / 2, size.height / 2);
+                              this.addChild(label, 1);
+                          }
+                      });
+                      cc.director.runScene(new MyScene());
+                  }, this);
+              };
+              cc.game.run("gameCanvas");
+          };
+    </script>
+</body>
+</html>
