@@ -36,6 +36,7 @@ var startLayer = cc.Layer.extend({
 
     
     this.scheduleUpdate();
+    this.updateSchedule();
     this.schedule(this.updateSchedule, 1);
   },
   update: function(){
@@ -66,4 +67,5 @@ var startScene = cc.Scene.extend({
     var layer = new startLayer();
     this.addChild(layer);
   }
-})
+});
+
