@@ -1,5 +1,7 @@
 window.onload = function(){
 
+  //resize canvas according to the of the browser's window
+  resizeCanvas();
 
 
   cc.game.onStart = function(){
@@ -47,7 +49,7 @@ var startLayer = cc.Layer.extend({
         this.removeChild(this.helloLabel);
     this.count++;
     this.helloLabel = new cc.LabelTTF.create("Scheduler 每帧一次:" + this.count, 38);
-    this.helloLabel.setColor(new cc.color(0,0,0));
+    this.helloLabel.setColor(new cc.color(255,255,255));
     this.helloLabel.x = this.size.width/2;
     this.helloLabel.y = this.size.height/2;
     this.addChild(this.helloLabel);
@@ -57,7 +59,7 @@ var startLayer = cc.Layer.extend({
         this.removeChild(this.scheduleUpdateLabel);
     this.scheduleUpdateCount ++;
     this.scheduleUpdateLabel = new cc.LabelTTF.create("Scheduler 每秒一次:" + this.scheduleUpdateCount, 38);
-    this.scheduleUpdateLabel.setColor(new cc.color(0,0,0));
+    this.scheduleUpdateLabel.setColor(new cc.color(255,255,255));
     this.scheduleUpdateLabel.x = this.size.width/2;
     this.scheduleUpdateLabel.y = this.size.height/2 - 20;
     this.addChild(this.scheduleUpdateLabel);
@@ -72,30 +74,39 @@ var startScene = cc.Scene.extend({
   }
 });
 
-
-var getWinSize = function(){
-  var winSize = null;
-  // get window width
-  if (window.innerWidth)
-  winSize.winWidth = window.innerWidth;
-  else if ((document.body) && (document.body.clientWidth))
-  winSize.winWidth = document.body.clientWidth;
-  // get window height
-  if (window.innerHeight)
-  winSize.winHeight = window.innerHeight;
-  else if ((document.body) && (document.body.clientHeight))
-  winSize.winHeight = document.body.clientHeight;
-  // get window size by deep dive body inside Document
-  if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth)
-  {
-  winSize.winHeight = document.documentElement.clientHeight;
-  winSize.winWidth = document.documentElement.clientWidth;
-
-  return winSize;
-};
-
+//resize canvas according to the of the browser's window
+//TODO 1: precisely resize
+//TODO 2: resize canvas when window resized
 var resizeCanvas = function(){
+  var getWinSize = function(){
+    var winSize = function(){};
+    // get window width
+    if (window.innerWidth)
+    winSize.winWidth = window.innerWidth;
+    else if ((document.body) && (document.body.clientWidth))
+    winSize.winWidth = document.body.clientWidth;
+    // get window height
+    if (window.innerHeight)
+    winSize.winHeight = window.innerHeight;
+    else if ((document.body) && (document.body.clientHeight))
+    winSize.winHeight = document.body.clientHeight;
+    // get window size by deep dive body inside Document
+    if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth)
+    {
+      winSize.winHeight = document.documentElement.clientHeight;
+      winSize.winWidth = document.documentElement.clientWidth;
+    }
+    return winSize;
+  };
   var winSize = getWinSize();
-  var canvas = document.getElementByName("canvas")[0];
-  canvas.
+  var canvas = document.getElementsByTagName("canvas")[0];
+  console.log(winSize.winWidth);
+  canvas.style.width = winSize.winWidth - 30 + 'px';
+  canvas.style.height = winSize.winHeight - 30 + 'px';
+  //canvas.style.width = "100%";
+  //canvas.style.height = "100%";
+  canvas.style.border = 'solid';
+  document.getElementsByTagName("body")[0].style.backgroundColor = "black";
+
+  console.log(canvas.style.width);
 };
