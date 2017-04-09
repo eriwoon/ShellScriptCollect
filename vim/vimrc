@@ -2,9 +2,9 @@ set nocompatible              " be iMproved, required
 filetype on                   " required
 syntax on
 "colorscheme molokai
-set background=dark
+"set background=dark
 "set background=light
-colorscheme solarized
+"colorscheme solarized
 
 "set tab to 4 spaces
 set ts=4
@@ -38,7 +38,7 @@ Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
 " Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
+"Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -49,6 +49,8 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 "Plugin 'Python-mode-klen'
 Plugin 'klen/python-mode'
+"Turn off some pymode Errors
+let g:pymode_lint_ignore = "W,E501,E265,E221,E251,E231,E225"
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
 "set laststatus=2
