@@ -1,16 +1,16 @@
 var threeSumClosest = function(nums, target) {
     nums.sort(function(l,r){return l-r;});
     
-    var abs = function(val){return val < 0 ? 0 - val : val;};
+    var abs = function(val){return (val < 0 ? 0 - val : val);};
     var minimal;
-    //debugger;
+    debugger;
     for(var first = 0; first < nums.length - 2; first ++){
         for(var second = first + 1; second < nums.length - 1; second ++){
             for(var start = second + 1, end = nums.length - 1; ;){
                 var testpoint = (start + end) >> 1;
                 var sum       = nums[first] + nums[second] + nums[testpoint] - target;
                 
-                if(minimal === undefined || abs(sum) < minimal)
+                if(minimal === undefined || abs(sum) < abs(minimal))
                     minimal = sum;
 
                 if(sum > 0){
