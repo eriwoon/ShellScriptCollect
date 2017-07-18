@@ -19,7 +19,59 @@ The median is (2 + 3)/2 = 2.5*/
  * @return {number}
  */
 var findMedianSortedArrays = function(nums1, nums2) {
-    return 2;
+    var target = nums1.length > nums2.length ? nums1 : nums2;
+    var donator= nums1.length > nums2.length ? nums2 : nums1;
+
+    var tstart = 0, tend = target.length;
+    var dstart = 0, dend = donator.length;
+
+    while(dend - dstart > 2){
+    	if((dend - dstart) % 2 == 1){ //if donator is oddnumber
+    		var dmiddle = parseInt((dend - dstart) / 2) + 1;
+
+    		if((tend - tstart) % 2 == 1){
+    			var tmiddle = parseInt((tend - tstart) / 2) + 1;
+
+    			if(target[tmiddle] > dmiddle[dmiddle]){ // 1/3/*5*/7/9 & 2/*4*/6
+    				tstart -= (dmiddle - dstart);
+    				dstart = dmiddle;
+    			}
+    			else{									// 1/3/*5*/7/9 & 4/*6*/8
+    				tend += (dend - dmiddle + 1);
+    				dend = dmiddle + 1;
+    			}
+    		}
+    		else{
+    			var tmiddle = [parseInt((tend - tstart) / 2) - 1, parseInt((tend - tstart) / 2)];
+
+    			// 1/3/*5/7*/9/11 & 4/*6*/8 => 6
+    			if(target[tmiddle[0]] <= donator[dmiddle] && donator[dmiddle] <= target[tmiddle[1]] )
+    				return donator[dmiddle];
+    			// 1/3/*5/7*/9/11 & 2/*4*/6
+    			else if(target[tmiddle[0]] > donator[dmiddle]){
+    				tstart -= (dmiddle - dstart);
+    				dstart = dmiddle;
+    			}
+    			// 1/3/*5/7*/9/11 & 6/*8*/10
+    			else{
+    				tend += (dend - dmiddle + 1);
+    				dend = dmiddle + 1;
+    			}
+    		}
+    	}
+    	else{ //if dnoator is 
+
+    	}
+    }
+    if(dend - dstart == 2){
+
+    }
+    else if(dend - dstart == 1){
+
+    }
+    else{	//dend - dstart === 0
+
+    }
 };
 
 var calc = function(num1, num2){
