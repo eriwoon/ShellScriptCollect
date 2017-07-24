@@ -59,8 +59,20 @@ var findMedianSortedArrays = function(nums1, nums2) {
     			}
     		}
     	}
-    	else{ //if dnoator is 
+    	else{ //if dnoator is even number
+            var dmiddle = [parseInt((dend - dstart) / 2) - 1, parseInt((dend - dstart) / 2)];
+            if((tend - tstart) % 2 == 1){
+                var tmiddle = parseInt((tend - tstart) / 2) + 1;
 
+                // 1/3/*5*/7/9 2/*4/6*/8
+                if(donator[dmiddle[0]] <= target[tmiddle] && target[tmiddle] <= donator[dmiddle[1]] )
+                    return target[tmiddle];
+                // 1/3/*5*/7/9 4/*6/8*/10
+                else if(tmiddle < donator[dmiddle[0]]){
+                    tend += (dend - dmiddle[1] + 1);
+                    dend = dmiddle[1] + 1;
+                }
+            }
     	}
     }
     if(dend - dstart == 2){
