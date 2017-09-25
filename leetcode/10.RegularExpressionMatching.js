@@ -25,5 +25,18 @@ isMatch("aab", "c*a*b") → true
  * @return {boolean}
  */
 var isMatch = function(s, p) {
-    
+    //Analyze the pattern
+    sp = [];
+    for(let i = 0; i < p.length; i++){
+    	if(p[i] != '*')
+    		sp.push(p[i]);
+    	else {
+    		if(sp.length === 0 || sp[sp.length - 1].star === undefined)
+    			return
+    		sp[sp.length - 1].star = true;
+    	}
+    }
+    console.log(sp);
+
+
 };
